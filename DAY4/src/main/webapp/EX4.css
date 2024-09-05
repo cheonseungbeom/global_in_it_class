@@ -1,0 +1,33 @@
+@charset "EUC-KR";
+
+
+
+body.main { /* class ºø∑∫≈Õ */
+	 background-color : skyblue;
+}
+
+.headline { /* class ºø∑∫≈Õ */
+	 color : red;
+}
+
+div.help { /* class ºø∑∫≈Õ */
+	 color : blue;
+}
+
+.help. 2class
+{ /* class ºø∑∫≈Õ */
+	 color : blue;
+}
+
+
+
+
+p.help { /* class ºø∑∫≈Õ */
+	 color : red;
+	 font-size : 20px;
+}
+
+#hot { 
+	/* background-color : */
+	 background-color : orange;
+}
