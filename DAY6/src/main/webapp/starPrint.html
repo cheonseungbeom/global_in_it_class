@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>별 찍기</title>
+</head>
+<body>
+<h1>별 문자 출력하기</h1>
+<hr>
+<script>
+let star = prompt("정수를 입력하세요", 0);
+	star = parseInt(star); // 문자열을 숫자로 바꿈
+for (let size=0; size<star; size++) {	
+	for (let i=0; i<= size; i++) {	
+		document.write("*")
+		}
+	document.write("<br>")
+}
+</script>
+</body>
+</html>
