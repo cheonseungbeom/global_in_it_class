@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "Complete-Food-Delivery-App-Flutter-main"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "Complete-Food-Delivery-App-Flutter-main-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
