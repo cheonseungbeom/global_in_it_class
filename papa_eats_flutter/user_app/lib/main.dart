@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget { //본격적으로 앱 실행됐을 때 가
         ChangeNotifierProvider(create: (context) => AddressChanger()),
       ], //MultiProvider를 사용하여 
       child: MaterialApp(
-        title: 'Users App',
+        title: 'Users App', // 앱의 이름
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
