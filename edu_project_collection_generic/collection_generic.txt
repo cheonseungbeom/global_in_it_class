@@ -1,0 +1,31 @@
+String Interpolation(보간법)
+
+- 문자열을 출력할 때 중간 다른 기호를 넣어
+
+Collectiom and Generic
+
+Collection
+- 데이터를 모아서 가지고 있는 자료구조
+
+Generic
+- 컬렉션을 구현하는데 있어서 컬렉션이 가지고 있는 데이터들의 타입을 원하는 대로 지정해 줄 수 있는 방법을 제공하는 기법
+
+
+코드의 안정성을 확보하고 코드의 재사용성을 가능하게 하는 기법
+flutter에서 가장 흔한 컬렉션은 List이다. 이는 다른 언어에선 Array라고 한다. 그리고 Set과 Map 도 있다
+
+list의 종류는 2가지이다.
+fixed length list
+growable list
+
+var number = new List(4); //fixed length list
+var number = new List(); //growable list
+
+new List는 List클래스의 생성자를 통해 새로운 인스턴스를 생성하고 number라는 변수에 할당.or number변수에 리스트 개체 참조를 저장.
+
+여기서 number는 var에 의해 List 타입이 된다.
+그리고 List<dynamic> number 로 표현되는데 이는 리스트 안에 여러가지 자료형이 들어올 수 있음을 의미한다.
+리스트 안엔 객체는 다 넣을 수 있다.
+
+List<dynamic> 리스트 안에 다 들어올 수 있다
+List<int> 리스트 안에 인트만 들어올 수 있다

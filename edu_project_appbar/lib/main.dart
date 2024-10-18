@@ -55,7 +55,7 @@ class MyPage extends StatelessWidget {
               backgroundColor: MaterialStateProperty.all(Colors.red)),
           onPressed: () {
             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              content: Text('Hellow'),//밑에 팝업 형식으로 뜨는 메세지가 스낵바이다.
+              content: Text('Hellow'), //밑에 팝업 형식으로 뜨는 메세지가 스낵바이다.
             ));
           },
         ),
