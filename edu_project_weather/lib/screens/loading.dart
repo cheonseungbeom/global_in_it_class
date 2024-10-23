@@ -1,16 +1,20 @@
-import 'dart:math';
-import 'package:http/http.dart';
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:edu_project_weather/data/my_location.dart';
+import 'package:edu_project_weather/screens/weather_screen.dart';
+import 'package:edu_project_weather/data/network.dart';
+
+const apikey = '967a54f9dc0f757142dabab406009dcb';
 
 class Loading extends StatefulWidget {
   const Loading({super.key});
-
   @override
   State<Loading> createState() => _LoadingState();
 }
 
 class _LoadingState extends State<Loading> {
+  late double latutude3;
+  late double longitude3;
+
   @override
   void initState() {
     //앱을 실행시키는 메소드
@@ -20,15 +24,39 @@ class _LoadingState extends State<Loading> {
   }
 
   void getLocation() async {
-    try {
-      LocationPermission permission = await Geolocator.requestPermission();
-      Position position = await Geolocator.getCurrentPosition(
-          desiredAccuracy: LocationAccuracy.high);
-      print(position);
-    } catch (e) {
-      print('인터넷 연결에 문제가 발생했습니다.');
-    }
+    MyLocation myLocation = MyLocation();
+    await myLocation.getMyCurrentLocation();
+    latutude3 = myLocation.latitude2;
+    longitude3 = myLocation.longitude2;
+    print(latutude3);
+    print(longitude3);
+
+    Network network = Network(
+        'https://api.openweathermap.org/data/2.5/weather?lat=$latutude3&lon=$longitude3&appid=$apikey&units=metric');
+
+    var weatherData = await network.getJsonData();
+    print(weatherData);
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return WeatherScreen(
+        parseWeatherData: weatherData,
+      );
+    }));
   }
+
+  // void fetchData() async {
+
+  //     var myJson = jsonDecode(jasonData)['weather'][0]['description'];
+
+  //     var wind = jsonDecode(jasonData)['wind']['speed'];
+  //     print(wind);
+
+  //     var id = jsonDecode(jasonData)['id'];
+  //     print(id);
+
+  //     print(myJson);
+  //   } else {
+  //     print(response.body);
+  //   }
 
   @override
   Widget build(BuildContext context) {
