@@ -32,14 +32,19 @@ class _LoadingState extends State<Loading> {
     print(longitude3);
 
     Network network = Network(
-        'https://api.openweathermap.org/data/2.5/weather?lat=$latutude3&lon=$longitude3&appid=$apikey&units=metric');
+        'https://api.openweathermap.org/data/2.5/weather?lat=$latutude3&lon=$longitude3&appid=$apikey&units=metric',
+        'http://api.openweathermap.org/data/2.5/air_pollution?lat=$latutude3&lon=$longitude3&appid=$apikey');
 
     var weatherData = await network.getJsonData();
     print(weatherData);
+
+    var airData = await network.getAirData();
+    print(airData);
+
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return WeatherScreen(
-        parseWeatherData: weatherData,
-      );
+          parseWeatherData: weatherData, parseAirPollution: airData);
+      //웨더 스크린으로 이동시 두 웨더 데이터와 에어 데이터가 동시에 전달된다.
     }));
   }
 

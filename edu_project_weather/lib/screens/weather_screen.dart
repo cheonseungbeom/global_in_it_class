@@ -5,40 +5,54 @@ import 'package:edu_project_weather/model/model.dart';
 import 'package:intl/intl.dart'; //DateFormat을 쓰기위한 패키지
 
 class WeatherScreen extends StatefulWidget {
-  const WeatherScreen({super.key, this.parseWeatherData});
+  const WeatherScreen(
+      {super.key, this.parseWeatherData, this.parseAirPollution});
   final dynamic parseWeatherData;
+  final dynamic parseAirPollution;
 
   @override
   _WeatherScreenState createState() => _WeatherScreenState();
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
+  //스크린상 표현될 값들 선언
+  Model model = Model();
+
   late String cityName; //두 변수를 이용해 현재 나의 위치와 온도를 가져온다.
   late int temp; //두 변수를 이용해 현재 나의 위치와 온도를 가져온다.
-  var date = DateTime.now();
 
-  //스크린상 표현될 값들 선언
-
+  Widget? airIcon;
+  Widget? airState;
+  double? pm25;
+  double? pm10;
   Widget? icon;
+  var date = DateTime.now();
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    updateData(widget.parseWeatherData); //로딩 라우트에서 받아온 json데이터를 전달.
+    updateData(widget.parseWeatherData, widget.parseAirPollution);
+    //로딩 라우트에서 받아온 json데이터를 전달.
   }
 
-  void updateData(dynamic weatherData) {
-    Model model = Model();
+  void updateData(dynamic weatherData, dynamic airData) {
     double temp2 = weatherData['main']['temp'];
     int condition = weatherData['weather'][0]['id'];
+    int index = airData['list'][0]['main']['aqi'];
+    pm25 = airData['list'][0]['components']['pm2_5']; //초미세먼지
+    pm10 = airData['list'][0]['components']['pm10']; //미세먼지
 
     temp = temp2.round(); //두 변수를 이용해 현재 나의 위치와 온도를 가져온다.
     cityName = weatherData['name']; //두 변수를 이용해 현재 나의 위치와 온도를 가져온다.
     icon = model.getWeatherIcon(condition);
+    airIcon = model.getAirIcon(index);
+    airState = model.getAirCondition(index);
 
-    print(temp);
-    print(cityName);
+    // print(pm25);
+    // print(pm10);
+    // print(temp);
+    // print(cityName);
   }
 
   String getSystemTime() {
@@ -177,21 +191,11 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               const SizedBox(
                                 height: 10.0,
                               ),
-                              Image.asset(
-                                'image/bad.png',
-                                width: 37.0,
-                                height: 35.0,
-                              ),
+                              airIcon!,
                               const SizedBox(
                                 height: 10.0,
                               ),
-                              Text(
-                                '"매우나쁨"',
-                                style: GoogleFonts.lato(
-                                    fontSize: 14.0,
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.bold),
-                              ),
+                              airState!,
                             ],
                           ),
                           Column(
@@ -207,7 +211,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                 height: 10.0,
                               ),
                               Text(
-                                '174.75',
+                                '$pm10',
                                 style: GoogleFonts.lato(
                                   fontSize: 14.0,
                                   color: Colors.white,
@@ -238,7 +242,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                 height: 10.0,
                               ),
                               Text(
-                                '84.03',
+                                '$pm25',
                                 style: GoogleFonts.lato(
                                   fontSize: 14.0,
                                   color: Colors.white,
