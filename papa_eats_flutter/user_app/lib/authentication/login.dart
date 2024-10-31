@@ -94,8 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
           firebaseAuth.signOut();
           Navigator.pop(context);
           Fluttertoast.showToast(
-              msg:
-                  "관리자가 계정을 제한했습니다. \n\n Mail to:admin@gmail.com");
+              msg: "관리자가 계정을 제한했습니다. \n\n Mail to:admin@gmail.com");
         }
       } else {
         firebaseAuth.signOut();
@@ -153,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
               formValidation();
             },
             style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 119, 94, 102),
+                foregroundColor: const Color.fromARGB(255, 119, 94, 102),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
             child: const Text(
