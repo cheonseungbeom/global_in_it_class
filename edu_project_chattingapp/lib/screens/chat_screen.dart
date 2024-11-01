@@ -1,3 +1,5 @@
+import 'package:edu_project_chattingapp/chatting/chat/message.dart';
+import 'package:edu_project_chattingapp/chatting/chat/new_message.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -39,23 +41,55 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Chat screen'),
-        actions: [
-          IconButton(
-              onPressed: () {
-                _authentication.signOut(); //로그아웃 구현
-                Navigator.pop(context); //로그아웃은 팝 메소드로 구현
-              },
-              icon: const Icon(
-                Icons.exit_to_app_sharp,
-                color: Colors.white,
-              ))
-        ],
-      ),
-      body: const Center(
-        child: Text('Chat screen'),
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('Chat screen'),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  _authentication.signOut(); //로그아웃 구현
+                  // Navigator.pop(context); //로그아웃은 팝 메소드로 구현
+                },
+                icon: const Icon(
+                  Icons.exit_to_app_sharp,
+                  color: Colors.white,
+                ))
+          ],
+        ),
+        body: Container(
+          child: Column(
+            children: const [
+              Expanded(child: Messages()),
+              NewMessage(),
+            ],
+          ),
+        )
+        // StreamBuilder(
+        //   //스냅샷 메소드는 스트림을 반환한다. 따라서 데이터가 바뀔 때마다 새로운 밸류값을 반환해준다.
+        //   builder: (BuildContext context,
+        //       AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
+        //     if (snapshot.connectionState == ConnectionState.waiting) {
+        //       return const Center(
+        //         child: CircularProgressIndicator(),
+        //       );
+        //     } //로딩 창 구현
+        //     final docs = snapshot.data!.docs;
+        //     return ListView.builder(
+        //       itemBuilder: (context, index) {
+        //         return Container(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             docs[index]['text'],
+        //             style: const TextStyle(fontSize: 20.0),
+        //           ),
+        //         );
+        //       },
+        //       itemCount: docs.length,
+        //     );
+        //   },
+        //   stream: FirebaseFirestore.instance
+        //       .collection('/chats/TCMWmL83O6PA3cA8NrJs/message')
+        //       .snapshots(),
+        // )
+        );
   }
 }
