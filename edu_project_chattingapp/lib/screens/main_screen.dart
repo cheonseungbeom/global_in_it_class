@@ -1,4 +1,9 @@
+import 'dart:io';
+
+import 'chat_screen.dart';
+import 'package:edu_project_chattingapp/add_image/add_image.dart';
 import 'package:edu_project_chattingapp/config/palette.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -20,12 +25,26 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
   String userName = '';
   String userEmail = '';
   String userPassword = '';
+  File? userPickedImage;
+
+  void pickedImage(File image) {
+    userPickedImage = image;
+  }
 
   void _tryValidation() {
     final isValid = _formKey.currentState!.validate();
     if (isValid) {
       _formKey.currentState!.save();
     }
+  } //이 정보들을 데이터베이스로 전송하고 있다.
+
+  void showAlert(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+              backgroundColor: Colors.white, child: AddImage(pickedImage));
+        });
   }
 
   @override
@@ -158,18 +177,36 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                               },
                               child: Column(
                                 children: [
-                                  Text(
-                                    'SIGNUP',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                        color: isSignupScreen
-                                            ? Palette.activeColor
-                                            : Palette.textColor1),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'SIGNUP',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            color: isSignupScreen
+                                                ? Palette.activeColor
+                                                : Palette.textColor1),
+                                      ),
+                                      const SizedBox(
+                                        width: 15,
+                                      ),
+                                      if (isSignupScreen)
+                                        GestureDetector(
+                                          onTap: () {
+                                            showAlert(context);
+                                          },
+                                          child: Icon(Icons.image,
+                                              color: isSignupScreen
+                                                  ? Colors.cyan
+                                                  : Colors.grey[300]),
+                                        )
+                                    ],
                                   ),
                                   if (isSignupScreen)
                                     Container(
-                                      margin: const EdgeInsets.only(top: 3),
+                                      margin: const EdgeInsets.fromLTRB(
+                                          0, 3, 35, 0),
                                       height: 2,
                                       width: 55,
                                       color: Colors.orange,
@@ -179,7 +216,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                             )
                           ],
                         ),
-                        if (isSignupScreen)
+                        if (isSignupScreen) //회원가입 화면
                           Container(
                             margin: const EdgeInsets.only(top: 20),
                             child: Form(
@@ -436,6 +473,17 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                           showSpinner = true;
                         });
                         if (isSignupScreen) {
+                          if (userPickedImage == null) {
+                            setState(() {
+                              showSpinner = false;
+                            });
+
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                    content: Text('Please Pick Your Image')));
+
+                            return;
+                          }
                           _tryValidation();
                           try {
                             final newUser = await _authentication
@@ -443,16 +491,34 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                               email: userEmail,
                               password: userPassword,
                             );
+
+                            //파이어스토리지 버킷에 접근하게하는 ref()함수, 버킷 하나를 참조하고 있다고 생각하면 된다.
+                            final refImage = FirebaseStorage.instance
+                                .ref()
+                                .child('picked_image')
+                                .child(newUser.user!.uid + '.png');
+
+                            await refImage.putFile(userPickedImage!);
+                            final url = await refImage.getDownloadURL();
+
                             await FirebaseFirestore.instance
                                 .collection('user')
                                 .doc(newUser.user!.uid)
-                                .set(
-                                    {'userName': userName, 'email': userEmail});
+                                .set({
+                              'userName': userName,
+                              'email': userEmail,
+                              'picked_image': url
+                            });
+
                             if (newUser.user != null) {
-                              // Navigator.push(context,
-                              //     MaterialPageRoute(builder: (context) {
-                              //   return const ChatScreen();
-                              // }));
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return ChatScreen();
+                                  },
+                                ),
+                              );
                               setState(() {
                                 showSpinner = false;
                               });
@@ -461,10 +527,16 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
 
                           catch (e) {
                             print(e);
-                            ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                    content: Text(
-                                        'Please check email and password')));
+                            if (mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text(
+                                          'Please check email and password')));
+
+                              setState(() {
+                                showSpinner = false;
+                              });
+                            }
                           }
                         }
                         if (!isSignupScreen) {
