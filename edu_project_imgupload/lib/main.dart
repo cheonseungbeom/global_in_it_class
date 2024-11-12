@@ -1,7 +1,8 @@
 import 'dart:math';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
+import 'package:firebase_storage/firebase_storage.dart' as fStorage;
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
@@ -48,9 +49,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String? uploadedFileURL;
   bool isLoading = false;
-  File? pickedImage;
+  XFile? pickedImage;
   var random = Random();
   String imageName = _generateRandomName();
+  String userImageUrl = "";
 
   // void pickedImage(File image) {
   //   userPickedImage = image;
@@ -60,31 +62,40 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       isLoading = true;
     });
-    final refImage =
+    final fStorage.Reference refImage =
         FirebaseStorage.instance.ref().child('images').child('$imageName.png');
 
-    await refImage.putFile(pickedImage!);
-    final uploadedFileURL = await refImage.getDownloadURL();
+    //await refImage.putFile(File(pickedImage!.path));
+    final fStorage.UploadTask uploadTask =
+        refImage.putFile(File(pickedImage!.path));
+
+    uploadedFileURL = await refImage.getDownloadURL();
     // print(uploadedFileURL);
     print(imageName);
-  }
 
-  // void showAlert(BuildContext context) {
-  //   showDialog(
-  //       context: context,
-  //       builder: (context) {
-  //         return Dialog(
-  //             backgroundColor: Colors.white, child: AddImage(pickedImage));
-  //       });
-  // }
+    fStorage.TaskSnapshot taskSnapshot = await uploadTask;
+    String downloadUrl = await taskSnapshot.ref.getDownloadURL();
+
+    uploadedFileURL = downloadUrl;
+
+    // await FirebaseFirestore.instance
+    //     .collection('user')
+    //     .doc(newUser.user!.uid)
+    //     .set(
+    //   {'picked_image': uploadedFileURL},
+    // );
+    //파이어스토어에도 잘 올라가는 지 테스트하기위해
+
+    print(uploadedFileURL);
+  }
 
   void _pickImage() async {
     final imagePicker = ImagePicker();
-    final pickedImageFile = await imagePicker.pickImage(
-        source: ImageSource.gallery, imageQuality: 50, maxHeight: 150);
+    final pickedImageFile =
+        await imagePicker.pickImage(source: ImageSource.gallery);
     setState(() {
       if (pickedImageFile != null) {
-        pickedImage = File(pickedImageFile.path);
+        pickedImage = XFile(pickedImageFile.path);
       }
     });
     //widget.addImageFunc(pickedImage);

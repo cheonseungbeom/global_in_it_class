@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:user_app/authentication/login.dart';
 import 'package:user_app/authentication/register.dart';
@@ -20,13 +18,7 @@ class _AuthScreenState extends State<AuthScreen> {
         appBar: AppBar(
           flexibleSpace: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Color.fromARGB(255, 145, 116, 113), Color.fromARGB(255, 87, 58, 58)],
-                begin: FractionalOffset(0.0, 0.0),
-                end: FractionalOffset(1.0, 0.0),
-                stops: [0.0, 1.0],
-                tileMode: TileMode.clamp,
-              ),
+              color: Colors.cyan,
             ),
           ),
           automaticallyImplyLeading:
@@ -34,7 +26,10 @@ class _AuthScreenState extends State<AuthScreen> {
           title: const Text(
             'PAPA-Eats',
             style: TextStyle(
-                fontSize: 50, color: Colors.white, fontFamily: "Train"),
+              fontSize: 50,
+              color: Color.fromARGB(255, 255, 255, 255),
+              //fontFamily: "Train"
+            ),
           ),
           centerTitle: true,
           bottom: const TabBar(
@@ -54,7 +49,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 text: ('가입'),
               ),
             ],
-            indicatorColor: Colors.white38,
+            indicatorColor: Color.fromARGB(97, 255, 255, 255),
             indicatorWeight: 6,
           ),
         ),
@@ -63,7 +58,10 @@ class _AuthScreenState extends State<AuthScreen> {
             gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
-              colors: [Color.fromARGB(255, 119, 79, 92), Color.fromARGB(255, 145, 104, 101)],
+              colors: [
+                Color.fromARGB(255, 255, 255, 255),
+                Color.fromRGBO(235, 230, 230, 1)
+              ],
             ),
           ),
           child: const TabBarView(children: [
