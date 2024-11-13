@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '68013423242',
     projectId: 'globalin-project',
     authDomain: 'globalin-project.firebaseapp.com',
-    storageBucket: 'globalin-project.appspot.com',
+    storageBucket: 'globalin-project.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -60,7 +60,7 @@ class DefaultFirebaseOptions {
     appId: '1:68013423242:android:a27a063184f27898664b73',
     messagingSenderId: '68013423242',
     projectId: 'globalin-project',
-    storageBucket: 'globalin-project.appspot.com',
+    storageBucket: 'globalin-project.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -68,7 +68,7 @@ class DefaultFirebaseOptions {
     appId: '1:68013423242:ios:248f02edddf62ac2664b73',
     messagingSenderId: '68013423242',
     projectId: 'globalin-project',
-    storageBucket: 'globalin-project.appspot.com',
+    storageBucket: 'globalin-project.firebasestorage.app',
     iosBundleId: 'com.example.userApp',
   );
 }

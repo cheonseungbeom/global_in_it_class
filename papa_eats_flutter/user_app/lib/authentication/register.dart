@@ -99,11 +99,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
           //print(imageXFile!.path);
 
           // 업로드 완료 후 다운로드 URL 가져오기
-          fStorage.TaskSnapshot taskSnapshot = await uploadTask;
-          String downloadUrl = await taskSnapshot.ref.getDownloadURL();
+          
+            fStorage.TaskSnapshot taskSnapshot = await uploadTask;
+            String downloadUrl = await taskSnapshot.ref.getDownloadURL();
+
+            userImageUrl = downloadUrl;
+          
 
           // 다운로드 URL을 변수에 저장
-          userImageUrl = downloadUrl;
 
           // 유저 인증 및 회원가입 함수 호출
           authenticateUserAndSignUp();

@@ -14,7 +14,7 @@ class _CakeItems1State extends State<CakeItems1> {
   List list1 = <CakeItemsModel>[
     CakeItemsModel(
         cakeImageLink: 'assets/images/cake1.jpeg',
-        name: 'Cake Brown Factory',
+        name: '케이크 공주 퍼핀 왕자',
         cakeRating: '4.0',
         cakeDiscount: '10% OFF up to 150'),
     CakeItemsModel(

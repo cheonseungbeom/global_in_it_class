@@ -38,8 +38,8 @@ class _MySplashScreenState extends State<MySplashScreen> {
       decoration: const BoxDecoration(
           gradient: LinearGradient(
               colors: [
-                Color.fromARGB(255, 116, 122, 94),
-                Color.fromARGB(255, 107, 79, 79),
+                Colors.cyan,
+                Colors.cyan,
               ],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
@@ -75,7 +75,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 24,
-                        fontFamily: "Signatra",
+                        fontFamily: "",
                         letterSpacing: 3),
                   ),
                 ],

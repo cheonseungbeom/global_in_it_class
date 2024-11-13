@@ -8,6 +8,8 @@ import 'package:user_app/mainScreens/my_orders_screen.dart';
 import 'package:user_app/mainScreens/search_screen.dart';
 
 class MyDrawer extends StatelessWidget {
+  const MyDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -22,7 +24,7 @@ class MyDrawer extends StatelessWidget {
                   elevation: 10,
                   child: Padding(
                     padding: const EdgeInsets.all(1.0),
-                    child: Container(
+                    child: SizedBox(
                       height: 160,
                       width: 160,
                       child: CircleAvatar(
@@ -62,7 +64,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "Home",
+                    "홈",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
@@ -83,14 +85,14 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "My Orders",
+                    "주문내역",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => MyOrdersScreen()));
+                            builder: (context) => const MyOrdersScreen()));
                   },
                 ),
                 const Divider(
@@ -104,7 +106,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "History",
+                    "주문내역",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
@@ -125,14 +127,14 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "Search",
+                    "검색",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => SearchScreen()));
+                            builder: (context) => const SearchScreen()));
                   },
                 ),
                 const Divider(
@@ -146,7 +148,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "Add new Address",
+                    "새 주소 지정",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
@@ -167,7 +169,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "Sign Out",
+                    "로그아웃",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {

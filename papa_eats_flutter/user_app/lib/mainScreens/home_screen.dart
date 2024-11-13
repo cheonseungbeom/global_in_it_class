@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.red, Colors.redAccent],
+              colors: [Colors.cyan, Colors.cyan],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -79,16 +79,16 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
         automaticallyImplyLeading: true,
       ),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: Column(
               children: [
-                Home(),
+                const Home(),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Container(
+                  child: SizedBox(
                     height: MediaQuery.of(context).size.height * .3,
                     width: MediaQuery.of(context).size.width,
                     child: CarouselSlider(

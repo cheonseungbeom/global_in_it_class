@@ -29,7 +29,7 @@ class BurgerState extends State<Burger> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.cyan,
           toolbarHeight: 30,
           leading: InkWell(
             onTap: () {

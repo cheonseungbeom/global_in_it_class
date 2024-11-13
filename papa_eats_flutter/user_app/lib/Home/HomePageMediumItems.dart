@@ -35,7 +35,7 @@ class HomeMediumItems extends StatelessWidget {
                         Expanded(
                             child: Image.asset('assets/images/offers.gif')),
                         const Text(
-                          'Offers',
+                          '주문',
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
@@ -71,7 +71,7 @@ class HomeMediumItems extends StatelessWidget {
                       children: [
                         Expanded(child: Image.asset('assets/images/cake.jpeg')),
                         const Text(
-                          'Offers',
+                          '주문',
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
@@ -108,7 +108,7 @@ class HomeMediumItems extends StatelessWidget {
                         Expanded(
                             child: Image.asset('assets/images/fruits.gif')),
                         const Text(
-                          'Offers',
+                          '주문',
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),

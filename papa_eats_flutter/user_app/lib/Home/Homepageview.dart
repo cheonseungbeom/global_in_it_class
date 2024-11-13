@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePageView> {
       home: Scaffold(
         appBar: AppBar(
           toolbarHeight: 5,
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.cyan,
         ),
         body: PageView(
           onPageChanged: (value) {

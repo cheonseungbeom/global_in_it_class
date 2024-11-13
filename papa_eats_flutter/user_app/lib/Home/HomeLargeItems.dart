@@ -35,7 +35,7 @@ class HomeLargeItems extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Text(
-                        'Special Discounts',
+                        '지금 할인!',
                         style: TextStyle(
                             color: Color.fromARGB(255, 255, 255, 255),
                             fontSize: 30,
@@ -72,7 +72,7 @@ class HomeLargeItems extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Text(
-                        'Book  Dining ',
+                        'sex',
                         style: TextStyle(
                             color: Color.fromARGB(255, 255, 255, 255),
                             fontSize: 30,

@@ -40,7 +40,7 @@ class _CartScreenState extends State<CartScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.red, Colors.redAccent],
+              colors: [Colors.cyan, Colors.cyan],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -59,7 +59,7 @@ class _CartScreenState extends State<CartScreen> {
         ),
         centerTitle: true,
         automaticallyImplyLeading: true,
-        actions: [],
+        actions: const [],
       ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

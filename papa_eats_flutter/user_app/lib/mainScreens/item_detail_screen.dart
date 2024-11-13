@@ -29,7 +29,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
             padding: const EdgeInsets.all(8.0),
             child: NumberInputPrefabbed.roundedButtons(
               controller: counterTextEditingController,
-              incDecBgColor: Colors.pinkAccent,
+              incDecBgColor: Colors.cyanAccent,
               min: 1,
               max: 9,
               initialValue: 1,

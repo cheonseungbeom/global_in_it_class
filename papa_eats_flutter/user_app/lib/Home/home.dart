@@ -48,7 +48,7 @@ class _DiningPagePageState extends State<Home> {
           Padding(
             padding: EdgeInsets.all(30.0),
             child: Text(
-              'EXPLORE',
+              '둘러보기',
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -63,7 +63,7 @@ class _DiningPagePageState extends State<Home> {
           Padding(
             padding: EdgeInsets.all(30.0),
             child: Text(
-              'WHATS ON YOUR MIND?',
+              '지금 땡기는 거!?',
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class _DiningPagePageState extends State<Home> {
           Padding(
             padding: EdgeInsets.all(30.0),
             child: Text(
-              'IN THE SPOTLIGHT',
+              '지금 뜨는 음식점!',
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,

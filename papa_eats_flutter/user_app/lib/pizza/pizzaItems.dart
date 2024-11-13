@@ -59,7 +59,7 @@ class _PizzaItems1State extends State<PizzaItems1> {
                                   padding: EdgeInsets.only(left: 8.0, top: 50),
                                   child: Expanded(
                                     child: Text(
-                                      '20% off up to Rs.50',
+                                      '20% off 최대 5,000원',
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 20,
@@ -182,7 +182,7 @@ class _PizzaItems1State extends State<PizzaItems1> {
                               children: [
                                 const Expanded(
                                   child: Text(
-                                    'Cake Brown Factory',
+                                    '케이크 공주 퍼핀 왕자',
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 25,
@@ -273,7 +273,7 @@ class _PizzaItems1State extends State<PizzaItems1> {
                                   padding: EdgeInsets.only(left: 8.0, top: 50),
                                   child: Expanded(
                                     child: Text(
-                                      '20% off up to Rs.50',
+                                      '20% off 최대 5,000원',
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 20,

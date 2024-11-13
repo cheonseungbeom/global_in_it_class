@@ -62,21 +62,26 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       isLoading = true;
     });
-    final fStorage.Reference refImage =
-        FirebaseStorage.instance.ref().child('images').child('$imageName.png');
 
-    //await refImage.putFile(File(pickedImage!.path));
+    // Firebase Storage 참조 설정
+    final fStorage.Reference refImage =
+        FirebaseStorage.instance
+        .ref()
+        .child('images')
+        .child('$imageName.png');
+
+    // 파일 업로드
     final fStorage.UploadTask uploadTask =
         refImage.putFile(File(pickedImage!.path));
 
-    uploadedFileURL = await refImage.getDownloadURL();
-    // print(uploadedFileURL);
-    print(imageName);
-
+    // 업로드 완료 후 다운로드 URL 가져오기
     fStorage.TaskSnapshot taskSnapshot = await uploadTask;
     String downloadUrl = await taskSnapshot.ref.getDownloadURL();
 
+    // 다운로드 URL을 변수에 저장
     uploadedFileURL = downloadUrl;
+
+    print(uploadedFileURL);
 
     // await FirebaseFirestore.instance
     //     .collection('user')
@@ -85,8 +90,6 @@ class _MyHomePageState extends State<MyHomePage> {
     //   {'picked_image': uploadedFileURL},
     // );
     //파이어스토어에도 잘 올라가는 지 테스트하기위해
-
-    print(uploadedFileURL);
   }
 
   void _pickImage() async {
