@@ -40,7 +40,9 @@ class MyDrawer extends StatelessWidget {
                 Text(
                   sharedPreferences!.getString("name")!,
                   style: const TextStyle(
-                      color: Colors.black, fontSize: 20, fontFamily: "Train"),
+                      color: Colors.black, fontSize: 20,
+                      //  fontFamily: "Train"
+                       ),
                 )
               ],
             ),

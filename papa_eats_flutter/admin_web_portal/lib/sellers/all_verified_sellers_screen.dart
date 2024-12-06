@@ -1,7 +1,6 @@
 import 'package:admin_web_portal/mainScreens/home_screen.dart';
 import 'package:admin_web_portal/widgets/simple_Appbar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class AllVerifiedSellersScreen extends StatefulWidget {
@@ -20,12 +19,12 @@ class _AllVerifiedSellersScreenState extends State<AllVerifiedSellersScreen> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text(
-            "Block Account",
+            "계정 정지",
             style: TextStyle(
                 fontSize: 25, letterSpacing: 2, fontWeight: FontWeight.bold),
           ),
           content: const Text(
-            "Do you want to Block this Account",
+            "이 사용자를 밴 처리 하시겠습니까",
             style: TextStyle(
               fontSize: 16,
               letterSpacing: 2,
@@ -142,7 +141,7 @@ class _AllVerifiedSellersScreenState extends State<AllVerifiedSellersScreen> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: ElevatedButton.icon(
-                      style: ElevatedButton.styleFrom(primary: Colors.red),
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                       icon: const Icon(
                         Icons.person_pin_sharp,
                         color: Colors.white,
@@ -177,9 +176,9 @@ class _AllVerifiedSellersScreenState extends State<AllVerifiedSellersScreen> {
     }
 
     return Scaffold(
-      appBar: SimpleAppBar(title: "All Verified Sellers Account "),
+      appBar: SimpleAppBar(title: "모든 판매자 계정 "),
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * 5,
           child: displayVerifiedUsersDesign(),
         ),

@@ -8,7 +8,6 @@ import 'package:admin_web_portal/sellers/all_verified_sellers_screen.dart';
 import 'package:admin_web_portal/users/all_blocked_users_screen.dart';
 import 'package:admin_web_portal/users/all_verified_users_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -35,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final DateTime timeNow = DateTime.now();
     final String liveTime = formatCurrentLiveTime(timeNow);
     final String liveDate = formatCurrentDate(timeNow);
-    if (this.mounted) {
+    if (mounted) {
       setState(() {
         timeText = liveTime;
         dateText = liveDate;
@@ -74,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     tileMode: TileMode.clamp)),
           ),
           title: const Text(
-            "Admin Web Portal",
+            "관리자 페이지",
             style:
                 TextStyle(fontSize: 20, letterSpacing: 3, color: Colors.white),
           ),
@@ -111,13 +110,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      "All Verified Users " + "\n" + "Account".toUpperCase(),
+                      "모든 사용자 \n${"계정".toUpperCase()}",
                       style: const TextStyle(
                           fontSize: 16, color: Colors.white, letterSpacing: 3),
                     ),
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(40),
-                      primary: Colors.amber,
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.amber,
                     ),
                   ),
                   const SizedBox(
@@ -136,13 +134,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      "All Blocked Users " + " \n" + "Account".toUpperCase(),
+                      "밴 당한 사용자  \n${"계정".toUpperCase()}",
                       style: const TextStyle(
                           fontSize: 16, color: Colors.white, letterSpacing: 3),
                     ),
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(40),
-                      primary: Colors.pinkAccent,
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.pinkAccent,
                     ),
                   )
                 ],
@@ -163,13 +160,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      "All Verified Seller's " + "\n" + "Account".toUpperCase(),
+                      "모든 판매자 \n${"계정".toUpperCase()}",
                       style: const TextStyle(
                           fontSize: 16, color: Colors.white, letterSpacing: 3),
                     ),
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(40),
-                      primary: Colors.pinkAccent,
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.pinkAccent,
                     ),
                   ),
                   const SizedBox(
@@ -188,13 +184,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      "All Blocked Seller's " + " \n" + "Account".toUpperCase(),
+                      "밴 당한 판매자  \n${"계정".toUpperCase()}",
                       style: const TextStyle(
                           fontSize: 16, color: Colors.white, letterSpacing: 3),
                     ),
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(40),
-                      primary: Colors.amber,
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.amber,
                     ),
                   ),
                 ],
@@ -215,13 +210,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      "All Verified Riders " + "\n" + "Account".toUpperCase(),
+                      "밴 당한 라이더 \n${"계정".toUpperCase()}",
                       style: const TextStyle(
                           fontSize: 16, color: Colors.white, letterSpacing: 3),
                     ),
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(40),
-                      primary: Colors.amber,
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.amber,
                     ),
                   ),
                   const SizedBox(
@@ -240,13 +234,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.white,
                     ),
                     label: Text(
-                      "All Blocked Riders " + " \n" + "Account".toUpperCase(),
+                      "모든 라이더  \n${"계정".toUpperCase()}",
                       style: const TextStyle(
                           fontSize: 16, color: Colors.white, letterSpacing: 3),
                     ),
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(40),
-                      primary: Colors.pinkAccent,
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.pinkAccent,
                     ),
                   )
                 ],
@@ -255,7 +248,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: () {
                   FirebaseAuth.instance.signOut();
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                      MaterialPageRoute(builder: (context) => const LoginScreen()));
                 },
                 icon: const Icon(
                   Icons.logout,
@@ -267,8 +260,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 16, color: Colors.white, letterSpacing: 3),
                 ),
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.all(40),
-                  primary: Colors.pinkAccent,
+                  padding: const EdgeInsets.all(40), backgroundColor: Colors.pinkAccent,
                 ),
               )
             ],

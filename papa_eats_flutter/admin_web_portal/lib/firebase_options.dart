@@ -44,38 +44,41 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDiV-cG4Ir3kL9_Wd7KZQUuH9-TJ40dosY',
-    appId: '1:181239189384:web:ab97e84612a1d5067a343d',
-    messagingSenderId: '181239189384',
-    projectId: 'fooddeliveryapp-785a0',
-    authDomain: 'fooddeliveryapp-785a0.firebaseapp.com',
-    storageBucket: 'fooddeliveryapp-785a0.appspot.com',
+    apiKey: "AIzaSyAYK_bexy8y2GHbjn8jfD0EVYeF_nQdcFo",
+    authDomain: "globalin-project.firebaseapp.com",
+    projectId: "globalin-project",
+    storageBucket: "globalin-project.firebasestorage.app",
+    messagingSenderId: "68013423242",
+    appId: "1:68013423242:web:6251262de506b14b664b73"
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCWVEJunIScMMTO_jvU8vA1MB5z5fYeqOw',
-    appId: '1:181239189384:android:7e4f50e390e50ddd7a343d',
-    messagingSenderId: '181239189384',
-    projectId: 'fooddeliveryapp-785a0',
-    storageBucket: 'fooddeliveryapp-785a0.appspot.com',
+    apiKey: "AIzaSyAYK_bexy8y2GHbjn8jfD0EVYeF_nQdcFo",
+    authDomain: "globalin-project.firebaseapp.com",
+    projectId: "globalin-project",
+    storageBucket: "globalin-project.firebasestorage.app",
+    messagingSenderId: "68013423242",
+    appId: "1:68013423242:web:6251262de506b14b664b73"
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA4u50e5SRWC5n4nZGad2hTtLvHWfoTKgI',
-    appId: '1:181239189384:ios:dfadb641d045c3697a343d',
-    messagingSenderId: '181239189384',
-    projectId: 'fooddeliveryapp-785a0',
-    storageBucket: 'fooddeliveryapp-785a0.appspot.com',
+    apiKey: "AIzaSyAYK_bexy8y2GHbjn8jfD0EVYeF_nQdcFo",
+    authDomain: "globalin-project.firebaseapp.com",
+    projectId: "globalin-project",
+    storageBucket: "globalin-project.firebasestorage.app",
+    messagingSenderId: "68013423242",
+    appId: "1:68013423242:web:6251262de506b14b664b73",
     iosClientId: '181239189384-66500bhv19bfl308qvuc8tnof39u7et5.apps.googleusercontent.com',
     iosBundleId: 'com.example.adminWebPortal',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA4u50e5SRWC5n4nZGad2hTtLvHWfoTKgI',
-    appId: '1:181239189384:ios:dfadb641d045c3697a343d',
-    messagingSenderId: '181239189384',
-    projectId: 'fooddeliveryapp-785a0',
-    storageBucket: 'fooddeliveryapp-785a0.appspot.com',
+    apiKey: "AIzaSyAYK_bexy8y2GHbjn8jfD0EVYeF_nQdcFo",
+    authDomain: "globalin-project.firebaseapp.com",
+    projectId: "globalin-project",
+    storageBucket: "globalin-project.firebasestorage.app",
+    messagingSenderId: "68013423242",
+    appId: "1:68013423242:web:6251262de506b14b664b73",
     iosClientId: '181239189384-66500bhv19bfl308qvuc8tnof39u7et5.apps.googleusercontent.com',
     iosBundleId: 'com.example.adminWebPortal',
   );

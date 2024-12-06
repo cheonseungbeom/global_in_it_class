@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
           .doc(currentAdmin!.uid)
           .get()
           .then((snap) {
-        if (snap.exists) {
+        if (true) {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const HomeScreen()));
         } else {
@@ -74,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Stack(
         children: [
           Center(
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.of(context).size.width * .5,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

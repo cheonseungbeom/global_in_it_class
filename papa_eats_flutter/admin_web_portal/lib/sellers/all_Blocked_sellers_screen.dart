@@ -20,12 +20,12 @@ class _AllBlockedSellersScreenState extends State<AllBlockedSellersScreen> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text(
-            "Unblock Account",
+            "정지 해제",
             style: TextStyle(
                 fontSize: 25, letterSpacing: 2, fontWeight: FontWeight.bold),
           ),
           content: const Text(
-            "Do you want to Unblock this Account",
+            "이 사용자를 해제 하시겠습니까",
             style: TextStyle(
               fontSize: 16,
               letterSpacing: 2,
@@ -140,7 +140,7 @@ class _AllBlockedSellersScreenState extends State<AllBlockedSellersScreen> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: ElevatedButton.icon(
-                      style: ElevatedButton.styleFrom(primary: Colors.green),
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
                       icon: const Icon(
                         Icons.person_pin_sharp,
                         color: Colors.white,
@@ -177,7 +177,7 @@ class _AllBlockedSellersScreenState extends State<AllBlockedSellersScreen> {
     return Scaffold(
       appBar: SimpleAppBar(title: "All Blocked Sellers Account "),
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * 5,
           child: displayVerifiedUsersDesign(),
         ),

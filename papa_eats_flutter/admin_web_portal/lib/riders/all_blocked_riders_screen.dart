@@ -1,7 +1,6 @@
 import 'package:admin_web_portal/mainScreens/home_screen.dart';
 import 'package:admin_web_portal/widgets/simple_Appbar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class AllBlockedRidersScreen extends StatefulWidget {
@@ -19,12 +18,12 @@ class _AllBlockedRidersScreenState extends State<AllBlockedRidersScreen> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text(
-            "UnBlock Account",
+            "밴 해제",
             style: TextStyle(
                 fontSize: 25, letterSpacing: 2, fontWeight: FontWeight.bold),
           ),
           content: const Text(
-            "Do you want to UnBlock this Account",
+            "이 사용자를 밴 처리 하시겠습니까",
             style: TextStyle(
               fontSize: 16,
               letterSpacing: 2,
@@ -35,12 +34,12 @@ class _AllBlockedRidersScreenState extends State<AllBlockedRidersScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text("No", style: TextStyle(color: Colors.red)),
+              child: const Text("아니오", style: TextStyle(color: Colors.red)),
             ),
             TextButton(
               onPressed: () {
                 Map<String, dynamic> userDataMap = {
-                  "status": "Approved",
+                  "상태": "승인",
                 };
                 FirebaseFirestore.instance
                     .collection("riders")
@@ -53,7 +52,7 @@ class _AllBlockedRidersScreenState extends State<AllBlockedRidersScreen> {
                           builder: (context) => const HomeScreen()));
                   SnackBar snackBar = const SnackBar(
                     content: Text(
-                      "UnBlocked Successfully",
+                      "해제가 성공하였습니다",
                       style: TextStyle(fontSize: 36, color: Colors.black),
                     ),
                     backgroundColor: Colors.green,
@@ -63,7 +62,7 @@ class _AllBlockedRidersScreenState extends State<AllBlockedRidersScreen> {
                 });
               },
               child: const Text(
-                "Yes",
+                "확인",
                 style: TextStyle(color: Colors.green),
               ),
             ),
@@ -139,7 +138,7 @@ class _AllBlockedRidersScreenState extends State<AllBlockedRidersScreen> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: ElevatedButton.icon(
-                      style: ElevatedButton.styleFrom(primary: Colors.green),
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
                       icon: const Icon(
                         Icons.person_pin_sharp,
                         color: Colors.white,
@@ -177,7 +176,7 @@ class _AllBlockedRidersScreenState extends State<AllBlockedRidersScreen> {
     return Scaffold(
       appBar: SimpleAppBar(title: "All Blocked Riders Account "),
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width * 5,
           child: displayBlockedRidersDesign(),
         ),

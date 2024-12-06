@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Admin Web Portal",
+      title: "관리자 페이지",
       home: FirebaseAuth.instance.currentUser == null
           ? const LoginScreen()
           : const HomeScreen(),
