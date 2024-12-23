@@ -52,17 +52,18 @@ class _LoginScreenState extends State<LoginScreen> {
         if (true) {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const HomeScreen()));
-        } else {
-          SnackBar snackBar = const SnackBar(
-            content: Text(
-              "No record found",
-              style: TextStyle(fontSize: 36, color: Colors.black),
-            ),
-            backgroundColor: Colors.pinkAccent,
-            duration: Duration(seconds: 3),
-          );
-          ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        }
+         } 
+        //else {
+        //   SnackBar snackBar = const SnackBar(
+        //     content: Text(
+        //       "No record found",
+        //       style: TextStyle(fontSize: 36, color: Colors.black),
+        //     ),
+        //     backgroundColor: Colors.pinkAccent,
+        //     duration: Duration(seconds: 3),
+        //   );
+        //   ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        // }
       });
     }
   }

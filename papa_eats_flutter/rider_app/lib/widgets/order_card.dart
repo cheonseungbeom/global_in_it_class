@@ -48,7 +48,7 @@ class OrderCard extends StatelessWidget {
             Items model =
                 Items.fromJson(data![index].data()! as Map<String, dynamic>);
             return placedOrderDesignWidget(
-                model, context, seperateQuantitiesList![index]);
+                model, context, seperateQuantitiesList![0]);
           },
         ),
       ),

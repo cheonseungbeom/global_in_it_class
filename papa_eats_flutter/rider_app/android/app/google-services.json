@@ -2,64 +2,63 @@
   "project_info": {
     "project_number": "68013423242",
     "project_id": "globalin-project",
-    "storage_bucket": "globalin-project.appspot.com"
+    "storage_bucket": "globalin-project.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:181239189384:android:bc1a0e633814b75b7a343d",
+        "mobilesdk_app_id": "1:68013423242:android:be56ac366e4f40c9664b73",
         "android_client_info": {
           "package_name": "com.harendra_prajapati_iphtech.rider_app"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "181239189384-90jb67r6j6p6fjv1fttqpqf3hfm9eech.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCWVEJunIScMMTO_jvU8vA1MB5z5fYeqOw"
+          "current_key": "AIzaSyBBIlHUxeyLgTdLk8DGIpJ-ZwrxY1ej8Q8"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "181239189384-90jb67r6j6p6fjv1fttqpqf3hfm9eech.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:181239189384:android:d2101e23b1aabab97a343d",
+        "mobilesdk_app_id": "1:68013423242:android:fe8930d75c4ee41b664b73",
         "android_client_info": {
           "package_name": "com.harendra_prajapati_iphtech.seller_app"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "181239189384-90jb67r6j6p6fjv1fttqpqf3hfm9eech.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCWVEJunIScMMTO_jvU8vA1MB5z5fYeqOw"
+          "current_key": "AIzaSyBBIlHUxeyLgTdLk8DGIpJ-ZwrxY1ej8Q8"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "181239189384-90jb67r6j6p6fjv1fttqpqf3hfm9eech.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68013423242:android:a27a063184f27898664b73",
+        "android_client_info": {
+          "package_name": "com.harendra_prajapati_iphtech.user_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBIlHUxeyLgTdLk8DGIpJ-ZwrxY1ej8Q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
         }
       }
     }

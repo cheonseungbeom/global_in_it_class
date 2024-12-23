@@ -43,7 +43,7 @@ class _EarningScreenState extends State<EarningScreen> {
           children: [
             // ignore: prefer_interpolation_to_compose_strings
             Text(
-              "₹" + sellerTotalEarnings.toString(),
+               "$sellerTotalEarnings원",
               style: const TextStyle(
                   fontSize: 50, color: Colors.white, fontFamily: "Signatra"),
             ),
@@ -71,7 +71,7 @@ class _EarningScreenState extends State<EarningScreen> {
             GestureDetector(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (c) => MySplashScreen()));
+                    MaterialPageRoute(builder: (c) => const MySplashScreen()));
               },
               child: const Card(
                 color: Colors.white,

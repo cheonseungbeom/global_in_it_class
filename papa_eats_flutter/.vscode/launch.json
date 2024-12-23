@@ -1,0 +1,88 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "admin_web_portal",
+            "cwd": "admin_web_portal",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "admin_web_portal (profile mode)",
+            "cwd": "admin_web_portal",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "admin_web_portal (release mode)",
+            "cwd": "admin_web_portal",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "rider_app",
+            "cwd": "rider_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "rider_app (profile mode)",
+            "cwd": "rider_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "rider_app (release mode)",
+            "cwd": "rider_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "seller_app",
+            "cwd": "seller_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "seller_app (profile mode)",
+            "cwd": "seller_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "seller_app (release mode)",
+            "cwd": "seller_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "user_app",
+            "cwd": "user_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "user_app (profile mode)",
+            "cwd": "user_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "user_app (release mode)",
+            "cwd": "user_app",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
