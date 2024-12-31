@@ -73,8 +73,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         title: const Text(
-          "PAPA-Eats",
-          style: TextStyle(fontFamily: "Signatra", fontSize: 40),
+          "PAPA-EATS",
+          style: TextStyle(fontFamily: "Calibre-Semibold", fontSize: 25),
         ),
         centerTitle: true,
         automaticallyImplyLeading: true,

@@ -31,7 +31,7 @@ class OrderCard extends StatelessWidget {
           gradient: LinearGradient(
               colors: [
                 Colors.black12,
-                Colors.white54,
+                Colors.black12,
               ],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
@@ -95,7 +95,7 @@ Widget placedOrderDesignWidget(
                     height: 10,
                   ),
                   const Text(
-                    "₹",
+                    "₩",
                     style: TextStyle(fontSize: 16, color: Colors.blue),
                   ),
                   Text(

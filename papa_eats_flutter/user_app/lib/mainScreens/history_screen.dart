@@ -4,7 +4,6 @@ import 'package:user_app/assistant_methods/assistant_methods.dart';
 import 'package:user_app/global/global.dart';
 import 'package:user_app/widgets/order_card.dart';
 import 'package:user_app/widgets/progress_bar.dart';
-import 'package:user_app/widgets/simple_Appbar.dart';
 
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({super.key});
@@ -18,9 +17,25 @@ class _HistoryScreenState extends State<HistoryScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: SimpleAppBar(
-          title: "History",
+        appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.cyan, Colors.cyan],
+              begin: FractionalOffset(0.0, 0.0),
+              end: FractionalOffset(1.0, 0.0),
+              stops: [0.0, 1.0],
+              tileMode: TileMode.clamp,
+            ),
+          ),
         ),
+        title: const Text(
+          "주문내역",
+          style: TextStyle(fontFamily: "Calibre-Semibold", fontSize: 25),
+        ),
+        centerTitle: true,
+        automaticallyImplyLeading: true,
+      ),
         body: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance
               .collection("users")

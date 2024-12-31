@@ -13,12 +13,12 @@ class StatusBanner extends StatelessWidget {
     IconData? iconData;
 
     status! ? iconData = Icons.done : iconData = Icons.cancel;
-    status! ? message = "Successful" : message = "UnsuccessFul";
+    status! ? message = "완료" : message = "배달중";
 
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.pinkAccent, Colors.redAccent],
+          colors: [Colors.cyan, Colors.cyanAccent],
           begin: FractionalOffset(0.0, 0.0),
           end: FractionalOffset(1.0, 0.0),
           stops: [0.0, 1.0],
@@ -44,8 +44,8 @@ class StatusBanner extends StatelessWidget {
           ),
           Text(
             orderStatus == "ended"
-                ? "Parcel Delivered $message"
-                : "Order Placed $message",
+                ? "배달 $message"
+                : "주문 완료 $message",
             style: const TextStyle(color: Colors.white),
           ),
           const SizedBox(

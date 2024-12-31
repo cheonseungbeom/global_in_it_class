@@ -45,7 +45,7 @@ class _MenusScreenState extends State<MenusScreen> {
             icon: const Icon(Icons.arrow_back)),
         title: const Text(
           "PAPA-Eats",
-          style: TextStyle(fontSize: 45, fontFamily: "Signatra"),
+          style: TextStyle(fontSize: 45, fontFamily: "Calibre-Semibold"),
         ),
         centerTitle: true,
         automaticallyImplyLeading: true,

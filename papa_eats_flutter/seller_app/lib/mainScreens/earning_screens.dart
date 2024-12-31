@@ -45,7 +45,7 @@ class _EarningScreenState extends State<EarningScreen> {
             Text(
                "$sellerTotalEarnings원",
               style: const TextStyle(
-                  fontSize: 50, color: Colors.white, fontFamily: "Signatra"),
+                  fontSize: 50, color: Colors.white, fontFamily: "Calibre-Semibold"),
             ),
             const Text(
               "Total Earnings",

@@ -25,7 +25,7 @@ class _SellersDesignWidgetState extends State<SellersDesignWidget> {
       splashColor: Colors.amber,
       child: Padding(
         padding: const EdgeInsets.all(5),
-        child: Container(
+        child: SizedBox(
           height: 300,
           width: MediaQuery.of(context).size.width,
           child: Column(children: [
@@ -45,12 +45,12 @@ class _SellersDesignWidgetState extends State<SellersDesignWidget> {
             Text(
               widget.model!.sellerName!,
               style: const TextStyle(
-                  color: Colors.pinkAccent, fontSize: 20, fontFamily: "Train"),
+                  color: Colors.black, fontSize: 20, fontFamily: "Calibre-Semibold"),
             ),
             Text(
               widget.model!.sellerEmail!,
               style: const TextStyle(
-                  color: Colors.grey, fontSize: 20, fontFamily: "Train"),
+                  color: Colors.grey, fontSize: 20, fontFamily: "Calibre-Semibold"),
             ),
             Divider(
               height: 4,

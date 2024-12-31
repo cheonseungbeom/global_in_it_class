@@ -149,12 +149,12 @@ class _DiningHomeListState extends State<DiningHomeList> {
                                   onPressed: null,
                                   child: Text(
                                     'Pay bill',
-                                    style: TextStyle(color: Colors.red),
+                                    style: TextStyle(color: Colors.cyan),
                                   ),
                                 ),
                                 Icon(
                                   Icons.navigate_next,
-                                  color: Colors.red,
+                                  color: Colors.cyan,
                                 )
                               ],
                             ))

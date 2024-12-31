@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
         decoration: index == 0 || index == 3 || index == 4
             ? const BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.redAccent, Colors.pinkAccent],
+                  colors: [Colors.cyan, Colors.cyan],
                   begin: FractionalOffset(0.0, 0.0),
                   end: FractionalOffset(1.0, 0.0),
                   stops: [0.0, 1.0],
@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
               )
             : const BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.redAccent, Colors.amber],
+                  colors: [Colors.cyan, Colors.cyan],
                   begin: FractionalOffset(0.0, 0.0),
                   end: FractionalOffset(1.0, 0.0),
                   stops: [0.0, 1.0],
@@ -146,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.red, Colors.pink],
+              colors: [Colors.cyan, Colors.cyan],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
               fontSize: 25,
               color: Colors.white,
               letterSpacing: 2,
-              fontFamily: "Signatra"),
+              fontFamily: "Calibre-Semibold"),
         ),
         centerTitle: true,
         automaticallyImplyLeading: false,

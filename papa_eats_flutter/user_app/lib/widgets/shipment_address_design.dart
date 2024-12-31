@@ -15,7 +15,7 @@ class ShipmentAddressDesign extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.all(10.0),
           child: Text(
-            "Shipping Details: ",
+            "배달 주소: ",
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ),
@@ -31,7 +31,7 @@ class ShipmentAddressDesign extends StatelessWidget {
                 TableRow(
                   children: [
                     const Text(
-                      "Name",
+                      "이름",
                       style: TextStyle(color: Colors.black),
                     ),
                     Text(model!.name.toString()),
@@ -40,7 +40,7 @@ class ShipmentAddressDesign extends StatelessWidget {
                 TableRow(
                   children: [
                     const Text(
-                      "Phone Number",
+                      "연락처",
                       style: TextStyle(color: Colors.black),
                     ),
                     Text(model!.phoneNumber!),
@@ -74,7 +74,7 @@ class ShipmentAddressDesign extends StatelessWidget {
                 alignment: Alignment.center,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Colors.pinkAccent, Colors.redAccent],
+                    colors: [Colors.cyan, Colors.cyan],
                     begin: FractionalOffset(0.0, 0.0),
                     end: FractionalOffset(1.0, 0.0),
                     stops: [0.0, 1.0],
@@ -85,7 +85,7 @@ class ShipmentAddressDesign extends StatelessWidget {
                 height: 50,
                 child: const Center(
                   child: Text(
-                    "Go Back",
+                    "돌아가기",
                     style: TextStyle(color: Colors.white, fontSize: 15.0),
                   ),
                 ),

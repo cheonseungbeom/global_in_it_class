@@ -49,7 +49,7 @@ addItemToCart(String? foodItemId, BuildContext context, int itemCounter) {
       .update({
     "userCart": tempList,
   }).then((value) {
-    Fluttertoast.showToast(msg: "Item Added Successfully. ");
+    Fluttertoast.showToast(msg: "장바구니에 담기 완료!");
 
     sharedPreferences!.setStringList("userCart", tempList);
 

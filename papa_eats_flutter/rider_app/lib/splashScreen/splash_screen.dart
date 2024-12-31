@@ -59,7 +59,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
                     style: TextStyle(
                         color: Colors.black54,
                         fontSize: 48,
-                        fontFamily: "Signatra",
+                        fontFamily: "Calibre-Semibold",
                         letterSpacing: 3),
                   ),
                   Text(
@@ -68,7 +68,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
                     style: TextStyle(
                         color: Colors.black54,
                         fontSize: 24,
-                        fontFamily: "Signatra",
+                        fontFamily: "Calibre-Semibold",
                         letterSpacing: 3),
                   ),
                 ],

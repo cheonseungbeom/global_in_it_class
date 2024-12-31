@@ -28,7 +28,7 @@ class _SearchScreenState extends State<SearchScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.red, Colors.red],
+              colors: [Colors.cyan, Colors.cyan],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -44,7 +44,7 @@ class _SearchScreenState extends State<SearchScreen> {
             initSearchingRestaurents(textEntered);
           },
           decoration: InputDecoration(
-            hintText: "Search Restaurent here...",
+            hintText: "가게 검색",
             hintStyle: const TextStyle(color: Colors.white54),
             border: InputBorder.none,
             suffix: IconButton(
@@ -73,7 +73,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   },
                 )
               : const Center(
-                  child: Text("No Recoord Found"),
+                  child: Text("결과 없음"),
                 );
         },
       ),

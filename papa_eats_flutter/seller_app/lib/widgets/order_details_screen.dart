@@ -11,7 +11,7 @@ import 'package:seller_app/widgets/status_banner.dart';
 class OrderDetailsScreen extends StatefulWidget {
   final String? orderId;
 
-  const OrderDetailsScreen({this.orderId});
+  const OrderDetailsScreen({super.key, this.orderId});
 
   @override
   State<OrderDetailsScreen> createState() => _OrderDetailsScreenState();
@@ -71,7 +71,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              "₹${dataMap["totolAmmount"]}",
+                              "₩${dataMap["totolAmmount"]}",
                               style: const TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
                             ),

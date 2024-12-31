@@ -7,7 +7,7 @@ class MyAppbar extends StatefulWidget with PreferredSizeWidget {
   final PreferredSizeWidget? bottom;
   final String? sellerUID;
 
-  MyAppbar({this.bottom, this.sellerUID});
+  MyAppbar({super.key, this.bottom, this.sellerUID});
   @override
   State<MyAppbar> createState() => _MyAppbarState();
 
@@ -24,7 +24,7 @@ class _MyAppbarState extends State<MyAppbar> {
       flexibleSpace: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.red, Colors.redAccent],
+            colors: [Colors.cyan, Colors.cyan],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -39,7 +39,7 @@ class _MyAppbarState extends State<MyAppbar> {
           icon: const Icon(Icons.arrow_back)),
       title: const Text(
         "PAPA-Eats",
-        style: TextStyle(fontSize: 45, fontFamily: "Signatra"),
+        style: TextStyle(fontSize: 45, fontFamily: "Calibre-Semibold"),
       ),
       centerTitle: true,
       automaticallyImplyLeading: true,
@@ -70,7 +70,7 @@ class _MyAppbarState extends State<MyAppbar> {
                         builder: (context, counter, c) {
                       return Text(
                         counter.count.toString(),
-                        style: const TextStyle(color: Colors.red, fontSize: 12),
+                        style: const TextStyle(color: Colors.cyan, fontSize: 12),
                       );
                     }),
                   ),

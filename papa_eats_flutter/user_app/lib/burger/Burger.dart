@@ -62,7 +62,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -101,7 +101,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -140,7 +140,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -179,7 +179,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -218,7 +218,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -257,7 +257,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -296,7 +296,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -335,7 +335,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -374,7 +374,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -413,7 +413,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [
@@ -452,7 +452,7 @@ class BurgerState extends State<Burger> {
                 width: 110,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.red,
+                  color: Colors.cyan,
                 ),
                 child: Row(
                   children: [

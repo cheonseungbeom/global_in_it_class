@@ -13,7 +13,7 @@ class _VegState extends State<Veg> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.cyan,
           toolbarHeight: 30,
           leading: InkWell(
             onTap: () {
@@ -37,12 +37,12 @@ class _VegState extends State<Veg> {
                 trailing: IconButton(
                     selectedIcon: Icon(
                       Icons.shopping_cart,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     ),
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -60,7 +60,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -78,7 +78,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -96,7 +96,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -114,7 +114,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -132,7 +132,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -150,7 +150,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -168,7 +168,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -186,7 +186,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -204,7 +204,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),
@@ -222,7 +222,7 @@ class _VegState extends State<Veg> {
                     onPressed: null,
                     icon: Icon(
                       Icons.shopping_cart_outlined,
-                      color: Colors.red,
+                      color: Colors.cyan,
                     )),
               ),
             ),

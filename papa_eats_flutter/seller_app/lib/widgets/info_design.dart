@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:seller_app/global/global.dart';
@@ -33,7 +32,7 @@ Fluttertoast.showToast(msg: "menu Deleted Successfully");
       splashColor: Colors.amber,
       child: Padding(
         padding: const EdgeInsets.all(5),
-        child: Container(
+        child: SizedBox(
           height: 300,
           width: MediaQuery.of(context).size.width,
           child: Column(children: [
@@ -56,12 +55,12 @@ Fluttertoast.showToast(msg: "menu Deleted Successfully");
                 Text(
                   widget.model!.menuTitle!,
                   style: const TextStyle(
-                      color: Colors.cyan, fontSize: 20, fontFamily: "Train"),
+                      color: Colors.cyan, fontSize: 20, fontFamily: "Calibre-Semibold"),
                 ),  IconButton(onPressed:() =>{
                   deleteMenu(widget.model!.menuId!)
                 },
                  icon: const Icon(Icons.delete_sweep,
-                  color: Colors.pinkAccent,))
+                  color: Colors.cyan,))
               ],
             ),
             // Text(

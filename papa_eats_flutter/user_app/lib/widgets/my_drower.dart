@@ -41,7 +41,7 @@ class MyDrawer extends StatelessWidget {
                   sharedPreferences!.getString("name")!,
                   style: const TextStyle(
                       color: Colors.black, fontSize: 20,
-                      //  fontFamily: "Train"
+                        fontFamily: "Calibre-Semibold"
                        ),
                 )
               ],
@@ -87,7 +87,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "주문내역",
+                    "내 주문",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
@@ -157,7 +157,7 @@ class MyDrawer extends StatelessWidget {
                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>  AddressScreen()));
+                            builder: (context) =>  const AddressScreen()));
                   },
                 ),
                 const Divider(

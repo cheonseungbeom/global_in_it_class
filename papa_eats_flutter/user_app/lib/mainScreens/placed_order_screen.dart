@@ -54,7 +54,7 @@ class _PlacedOrderScreenState extends State<PlacedOrderScreen> {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const HomeScreen()));
         Fluttertoast.showToast(
-            msg: "Congratulations, Order has been placed Successfully");
+            msg: "주문이 성공적으로 완료되었습니다!",);
       });
     });
   }
@@ -85,7 +85,7 @@ class _PlacedOrderScreenState extends State<PlacedOrderScreen> {
       child: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.white, Colors.red],
+            colors: [Colors.white, Colors.cyan],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -99,8 +99,8 @@ class _PlacedOrderScreenState extends State<PlacedOrderScreen> {
             onPressed: () {
               addOrderDetails();
             },
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
-            child: const Text('Place order'),
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.cyan),
+            child: const Text('주문 하기'),
           )
         ]),
       ),

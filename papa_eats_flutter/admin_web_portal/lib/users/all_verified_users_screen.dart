@@ -55,7 +55,7 @@ class _AllVerifiedUsersScreenState extends State<AllVerifiedUsersScreen> {
                       "Blocked Successfully",
                       style: TextStyle(fontSize: 36, color: Colors.black),
                     ),
-                    backgroundColor: Colors.pinkAccent,
+                    backgroundColor: Colors.cyan,
                     duration: Duration(seconds: 2),
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -63,7 +63,7 @@ class _AllVerifiedUsersScreenState extends State<AllVerifiedUsersScreen> {
               },
               child: const Text(
                 "Yes",
-                style: TextStyle(color: Colors.red),
+                style: TextStyle(color: Colors.cyan),
               ),
             ),
           ],
@@ -138,7 +138,7 @@ class _AllVerifiedUsersScreenState extends State<AllVerifiedUsersScreen> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: ElevatedButton.icon(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.cyan),
                       icon: const Icon(
                         Icons.person_pin_sharp,
                         color: Colors.white,

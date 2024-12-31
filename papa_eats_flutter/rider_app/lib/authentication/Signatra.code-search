@@ -1,0 +1,108 @@
+# Query: Signatra
+# ContextLines: 1
+
+23 results - 18 files
+
+admin_web_portal\lib\widgets\simple_Appbar.dart:
+  40          title!,
+  41:         style: const TextStyle(fontSize: 20, fontFamily: "Calibre-Semibold"),
+  42        ),
+
+rider_app\pubspec.yaml:
+  89    fonts:
+  90:      - family: Calibre-Semibold
+  91         fonts:
+  92:         - asset: assets/fonts/Calibre-Semibold.ttf
+  93    
+
+rider_app\lib\authentication\auth_screen.dart:
+  38                  color: Colors.white,
+  39:                 fontFamily: "Calibre-Semibold",
+  40                  letterSpacing: 6),
+
+rider_app\lib\mainScreens\earning_screens.dart:
+  21              Text("원$previousRidersEarnings",style: const TextStyle(
+  22:               fontSize: 50,color: Colors.white,fontFamily: "Calibre-Semibold"
+  23              ),),
+
+rider_app\lib\mainScreens\parcel_delivering_screen.dart:
+  150                            letterSpacing: 2,
+  151:                           fontFamily: "Calibre-Semibold"),
+  152                      ),
+
+rider_app\lib\mainScreens\parcel_picking_screen.dart:
+  109                            letterSpacing: 2,
+  110:                           fontFamily: "Calibre-Semibold"),
+  111                      ),
+
+rider_app\lib\splashScreen\splash_screen.dart:
+  61                          fontSize: 48,
+  62:                         fontFamily: "Calibre-Semibold",
+  63                          letterSpacing: 3),
+
+  70                          fontSize: 24,
+  71:                         fontFamily: "Calibre-Semibold",
+  72                          letterSpacing: 3),
+
+rider_app\lib\widgets\simple_Appbar.dart:
+  29          title!,
+  30:         style: const TextStyle(fontSize: 45, fontFamily: "Calibre-Semibold"),
+  31        ),
+
+seller_app\pubspec.yaml:
+  96          - asset: assets/fonts/Lobster-Regular.ttf
+  97:     - family: Calibre-Semibold
+  98        fonts:
+  99:         - asset: assets/fonts/Calibre-Semibold.ttf
+  100      - family: VarelaRound
+
+seller_app\lib\mainScreens\earning_screens.dart:
+  47                style: const TextStyle(
+  48:                   fontSize: 50, color: Colors.white, fontFamily: "Calibre-Semibold"),
+  49              ),
+
+seller_app\lib\splashScreen\splash_screen.dart:
+  60                          fontSize: 48,
+  61:                         fontFamily: "Calibre-Semibold",
+  62                          letterSpacing: 3),
+
+  69                          fontSize: 24,
+  70:                         fontFamily: "Calibre-Semibold",
+  71                          letterSpacing: 3),
+
+seller_app\lib\widgets\simple_Appbar.dart:
+  29          title!,
+  30:         style: const TextStyle(fontSize: 45, fontFamily: "Calibre-Semibold"),
+  31        ),
+
+seller_app\lib\widgets\text_widget_header.dart:
+  32              style: const TextStyle(
+  33:                 fontFamily: "Calibre-Semibold",
+  34                  fontSize: 30,
+
+user_app\pubspec.yaml:
+  103          - asset: assets/fonts/KiwiMaru-Medium.ttf
+  104:      - family: Calibre-Semibold
+  105         fonts:
+  106:         - asset: assets/fonts/Calibre-Semibold.ttf
+  107       - family: Train
+
+user_app\lib\mainScreens\cart_screen.dart:
+  57            "PAPA-Eats",
+  58:           style: TextStyle(fontSize: 45, fontFamily: "Calibre-Semibold"),
+  59          ),
+
+user_app\lib\mainScreens\menus_screen.dart:
+  47            "PAPA-Eats",
+  48:           style: TextStyle(fontSize: 45, fontFamily: "Calibre-Semibold"),
+  49          ),
+
+user_app\lib\widgets\simple_Appbar.dart:
+  29          title!,
+  30:         style: const TextStyle(fontSize: 45, fontFamily: "Calibre-Semibold"),
+  31        ),
+
+user_app\lib\widgets\text_widget_header.dart:
+  33              style: const TextStyle(
+  34:                 fontFamily: "Calibre-Semibold",
+  35                  fontSize: 30,

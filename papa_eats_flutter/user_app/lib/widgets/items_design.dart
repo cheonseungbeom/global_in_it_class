@@ -6,7 +6,7 @@ class ItemsDesignWidget extends StatefulWidget {
   Items? model;
   BuildContext? context;
 
-  ItemsDesignWidget({this.model, this.context});
+  ItemsDesignWidget({super.key, this.model, this.context});
 
   @override
   State<ItemsDesignWidget> createState() => _ItemsDesignWidgetState();
@@ -47,12 +47,12 @@ class _ItemsDesignWidgetState extends State<ItemsDesignWidget> {
             Text(
               widget.model!.title!,
               style: const TextStyle(
-                  color: Colors.pinkAccent, fontSize: 20, fontFamily: "Train"),
+                  color: Colors.black, fontSize: 20, fontFamily: "Calibre-Semibold"),
             ),
             Text(
               widget.model!.shortInfo!,
               style: const TextStyle(
-                  color: Colors.grey, fontSize: 20, fontFamily: "Train"),
+                  color: Colors.grey, fontSize: 20, fontFamily: "Calibre-Semibold"),
             ),
             Divider(
               height: 4,

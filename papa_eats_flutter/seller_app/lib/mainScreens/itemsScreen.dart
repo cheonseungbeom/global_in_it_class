@@ -9,12 +9,11 @@ import 'package:seller_app/widgets/my_drower.dart';
 import 'package:seller_app/widgets/progress_bar.dart';
 
 import '../model/menus.dart';
-import '../widgets/info_design.dart';
 import '../widgets/text_widget_header.dart';
 
 class ItemsScreen extends StatefulWidget {
   final Menus? model;
-  const ItemsScreen({this.model});
+  const ItemsScreen({super.key, this.model});
 
   @override
   State<ItemsScreen> createState() => _ItemsScreenState();
@@ -28,7 +27,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.red, Colors.pinkAccent],
+              colors: [Colors.cyan, Colors.cyan],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -38,7 +37,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
         ),
         title: Text(
           sharedPreferences!.getString("name")!,
-          style: const TextStyle(fontSize: 30, fontFamily: "Lobster"),
+          style: const TextStyle(fontSize: 30, fontFamily: "Calibre-Semibold"),
         ),
         centerTitle: true,
         automaticallyImplyLeading: true,
@@ -57,7 +56,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
               ))
         ],
       ),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
       body: CustomScrollView(
         slivers: [
           SliverPersistentHeader(

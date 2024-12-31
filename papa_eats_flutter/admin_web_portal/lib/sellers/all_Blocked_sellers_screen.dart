@@ -36,7 +36,7 @@ class _AllBlockedSellersScreenState extends State<AllBlockedSellersScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text("No", style: TextStyle(color: Colors.red)),
+              child: const Text("No", style: TextStyle(color: Colors.cyan)),
             ),
             TextButton(
               onPressed: () {

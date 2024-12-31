@@ -107,7 +107,7 @@ class _ParcelPickingScreenState extends State<ParcelPickingScreen> {
                           color: Colors.blue,
                           fontSize: 18,
                           letterSpacing: 2,
-                          fontFamily: "Signatra"),
+                          fontFamily: "Calibre-Semibold"),
                     ),
                   ],
                 )
@@ -138,7 +138,7 @@ class _ParcelPickingScreenState extends State<ParcelPickingScreen> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     gradient: const LinearGradient(
-                      colors: [Colors.pinkAccent, Colors.red],
+                      colors: [Colors.cyan, Colors.cyan],
                       begin: FractionalOffset(0.0, 0.0),
                       end: FractionalOffset(1.0, 0.0),
                       stops: [0.0, 1.0],

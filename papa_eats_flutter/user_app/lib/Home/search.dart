@@ -27,11 +27,11 @@ class Search extends StatelessWidget {
                       // border: OutlineInputBorder(),
                       prefixIcon: Icon(
                         Icons.search,
-                        color: Colors.red,
+                        color: Colors.cyan,
                       ),
                       suffixIcon: Icon(
                         Icons.mic_outlined,
-                        color: Colors.red,
+                        color: Colors.cyan,
                       ),
                       hintText: 'Restaurent Name or Dish...',
                     ),

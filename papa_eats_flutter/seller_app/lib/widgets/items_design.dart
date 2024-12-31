@@ -27,7 +27,7 @@ class _ItemDesignWidgetState extends State<ItemDesignWidget> {
       splashColor: Colors.amber,
       child: Padding(
         padding: const EdgeInsets.all(5),
-        child: Container(
+        child: SizedBox(
           height: 300,
           width: MediaQuery.of(context).size.width,
           child: Column(children: [
@@ -42,7 +42,7 @@ class _ItemDesignWidgetState extends State<ItemDesignWidget> {
             Text(
               widget.model!.title!,
               style: const TextStyle(
-                  color: Colors.cyan, fontSize: 18, fontFamily: "Train"),
+                  color: Colors.cyan, fontSize: 18, fontFamily: "Calibre-Semibold"),
             ),
             const SizedBox(
               height: 2,
@@ -58,7 +58,7 @@ class _ItemDesignWidgetState extends State<ItemDesignWidget> {
             Text(
               widget.model!.shortInfo!,
               style: const TextStyle(
-                  color: Colors.grey, fontSize: 20, fontFamily: "Train"),
+                  color: Colors.grey, fontSize: 20, fontFamily: "Calibre-Semibold"),
             ),
             Divider(
               height: 4,

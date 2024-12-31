@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:user_app/assistant_methods/address_changer.dart';
-import 'package:user_app/assistant_methods/total_ammount.dart';
 import 'package:user_app/mainScreens/placed_order_screen.dart';
 
 import 'package:user_app/models/address.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:user_app/models/sellers.dart';
 
 import '../maps/maps.dart';
 
@@ -40,7 +37,7 @@ class _AddressDesignState extends State<AddressDesign> {
             .displayResult(widget.value);
       },
       child: Card(
-        color: Colors.pinkAccent.withOpacity(0.4),
+        color: const Color.fromARGB(255, 131, 172, 175).withOpacity(0.4),
         child: Column(
           children: [
             Row(
@@ -48,7 +45,7 @@ class _AddressDesignState extends State<AddressDesign> {
                 Radio(
                   value: widget.value!,
                   groupValue: widget.curretIndex!,
-                  activeColor: Colors.red,
+                  activeColor: Colors.cyan,
                   onChanged: (val) {
                     Provider.of<AddressChanger>(context, listen: false)
                         .displayResult(val);
@@ -66,7 +63,7 @@ class _AddressDesignState extends State<AddressDesign> {
                           TableRow(
                             children: [
                               const Text(
-                                "Name ",
+                                "이름 ",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold),
@@ -77,7 +74,7 @@ class _AddressDesignState extends State<AddressDesign> {
                           TableRow(
                             children: [
                               const Text(
-                                "Phone Number ",
+                                "연락처 ",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold),
@@ -88,7 +85,7 @@ class _AddressDesignState extends State<AddressDesign> {
                           TableRow(
                             children: [
                               const Text(
-                                "Flat Number ",
+                                "주소 ",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold),
@@ -99,7 +96,7 @@ class _AddressDesignState extends State<AddressDesign> {
                           TableRow(
                             children: [
                               const Text(
-                                "City ",
+                                "도 ",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold),
@@ -110,7 +107,7 @@ class _AddressDesignState extends State<AddressDesign> {
                           TableRow(
                             children: [
                               const Text(
-                                "State ",
+                                "나라 ",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold),
@@ -121,7 +118,7 @@ class _AddressDesignState extends State<AddressDesign> {
                           TableRow(
                             children: [
                               const Text(
-                                "Full Address ",
+                                "상세 주소 ",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold),
@@ -143,7 +140,7 @@ class _AddressDesignState extends State<AddressDesign> {
                     widget.model!.lat!, widget.model!.lng!);
               },
               style: ElevatedButton.styleFrom(backgroundColor: Colors.black54),
-              child: const Text("Check on Maps"),
+              child: const Text("지도에서 확인하기"),
             ),
             widget.value == Provider.of<AddressChanger>(context).count
                 ? ElevatedButton(
@@ -158,8 +155,8 @@ class _AddressDesignState extends State<AddressDesign> {
                                   )));
                     },
                     style:
-                        ElevatedButton.styleFrom(backgroundColor: Colors.red),
-                    child: const Text('Proceed'),
+                        ElevatedButton.styleFrom(backgroundColor: Colors.cyan),
+                    child: const Text('설정'),
                   )
                 : Container(),
           ],

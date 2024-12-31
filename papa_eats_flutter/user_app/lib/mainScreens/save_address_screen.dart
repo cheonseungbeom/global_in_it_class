@@ -23,6 +23,8 @@ class SaveAddressScreen extends StatelessWidget {
   Position? position;
 
   String completeAddress = '';
+
+  SaveAddressScreen({super.key});
   getUserLocationAddress() async {
     LocationPermission permission = await Geolocator.requestPermission();
     Position newPosition = await Geolocator.getCurrentPosition(
@@ -56,8 +58,24 @@ class SaveAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: SimpleAppBar(
-        title: "PAPA-Eats",
+      appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.cyan, Colors.cyan],
+              begin: FractionalOffset(0.0, 0.0),
+              end: FractionalOffset(1.0, 0.0),
+              stops: [0.0, 1.0],
+              tileMode: TileMode.clamp,
+            ),
+          ),
+        ),
+        title: const Text(
+          "주소 추가",
+          style: TextStyle(fontFamily: "Calibre-Semibold", fontSize: 25),
+        ),
+        centerTitle: true,
+        automaticallyImplyLeading: true,
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
@@ -88,7 +106,7 @@ class SaveAddressScreen extends StatelessWidget {
             });
           }
         },
-        label: const Text("Save Now"),
+        label: const Text("저장"),
         icon: const Icon(Icons.save),
       ),
       body: SingleChildScrollView(
@@ -101,7 +119,7 @@ class SaveAddressScreen extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
-                  "Save New Address :",
+                  "새로운 주소 :",
                   style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
@@ -109,21 +127,21 @@ class SaveAddressScreen extends StatelessWidget {
                 ),
               ),
             ),
-            ListTile(
-              leading: const Icon(
+            const ListTile(
+              leading: Icon(
                 Icons.person_pin_circle,
                 color: Colors.black,
                 size: 35,
               ),
-              title: Container(
+              title: SizedBox(
                 width: 250,
-                child: const TextField(
+                child: TextField(
                   style: TextStyle(
                     color: Colors.black,
                   ),
                   // controller: _locationController,
                   decoration: InputDecoration(
-                      hintText: "What's your address",
+                      hintText: "주소 찾기",
                       hintStyle: TextStyle(color: Colors.black)),
                 ),
               ),
@@ -146,7 +164,7 @@ class SaveAddressScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                           side: const BorderSide(color: Colors.cyan)))),
               label: const Text(
-                "Get my address",
+                "지도에서 현재 위치 찾기",
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -155,27 +173,27 @@ class SaveAddressScreen extends StatelessWidget {
               child: Column(
                 children: [
                   MyTextField(
-                    hint: "Name",
+                    hint: "이름",
                     controller: _name,
                   ),
                   MyTextField(
-                    hint: "Phone Number",
+                    hint: "연락처",
                     controller: _phoneNumber,
                   ),
                   MyTextField(
-                    hint: "City",
+                    hint: "도",
                     controller: _city,
                   ),
                   MyTextField(
-                    hint: "State",
+                    hint: "나라",
                     controller: _state,
                   ),
                   MyTextField(
-                    hint: "Address Line",
+                    hint: "주소",
                     controller: _flatNumber,
                   ),
                   MyTextField(
-                    hint: "Complete Address",
+                    hint: "상세 주소",
                     controller: _completeAddress,
                   ),
                 ],

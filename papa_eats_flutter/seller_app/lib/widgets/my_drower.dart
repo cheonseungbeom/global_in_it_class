@@ -18,11 +18,11 @@ class MyDrawer extends StatelessWidget {
             padding: const EdgeInsets.only(top: 25, bottom: 10),
             child: Column(
               children: [
-                Material(
-                  borderRadius: const BorderRadius.all(Radius.circular(80)),
+                const Material(
+                  borderRadius: BorderRadius.all(Radius.circular(80)),
                   elevation: 10,
                   child: Padding(
-                    padding: const EdgeInsets.all(1.0),
+                    padding: EdgeInsets.all(1.0),
                     child: SizedBox(
                       height: 160,
                       width: 160,
@@ -39,7 +39,7 @@ class MyDrawer extends StatelessWidget {
                 Text(
                   sharedPreferences!.getString("name")!,
                   style: const TextStyle(
-                      color: Colors.black, fontSize: 20, fontFamily: "Train"),
+                      color: Colors.black, fontSize: 20, fontFamily: "Calibre-Semibold"),
                 )
               ],
             ),

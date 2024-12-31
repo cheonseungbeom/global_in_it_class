@@ -21,7 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
         "Loading..",
         style: TextStyle(fontSize: 36, color: Colors.white),
       ),
-      backgroundColor: Colors.pink,
+      backgroundColor: Colors.cyan,
       duration: Duration(seconds: 3),
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
           "Error Occured: $onError",
           style: const TextStyle(fontSize: 36, color: Colors.black),
         ),
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.cyan,
         duration: const Duration(seconds: 5),
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
         //       "No record found",
         //       style: TextStyle(fontSize: 36, color: Colors.black),
         //     ),
-        //     backgroundColor: Colors.pinkAccent,
+        //     backgroundColor: Colors.cyan,
         //     duration: Duration(seconds: 3),
         //   );
         //   ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -95,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.pink,
+                            color: Colors.cyan,
                             width: 2,
                           ),
                         ),
@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.pink,
+                            color: Colors.cyan,
                             width: 2,
                           ),
                         ),
@@ -148,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             horizontal: 100, vertical: 20),
                       ),
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.pink),
+                          MaterialStateProperty.all<Color>(Colors.cyan),
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.cyanAccent),
                     ),

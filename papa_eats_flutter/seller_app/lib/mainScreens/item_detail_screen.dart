@@ -69,7 +69,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "₹ ${widget.model!.price}",
+              "₩ ${widget.model!.price}",
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 26,
@@ -88,7 +88,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   gradient: const LinearGradient(
-                    colors: [Colors.pinkAccent, Colors.redAccent],
+                    colors: [Colors.cyan, Colors.cyan],
                     begin: FractionalOffset(0.0, 0.0),
                     end: FractionalOffset(1.0, 0.0),
                     stops: [0.0, 1.0],

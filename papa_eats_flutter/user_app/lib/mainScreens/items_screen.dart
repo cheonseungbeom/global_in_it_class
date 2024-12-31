@@ -26,7 +26,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
           SliverPersistentHeader(
             // pinned: true,
             delegate: TextWidgetHeader(
-                title: "Items's of ${widget.model!.menuTitle} "),
+                title: "${widget.model!.menuTitle}"),
           ),
           StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance

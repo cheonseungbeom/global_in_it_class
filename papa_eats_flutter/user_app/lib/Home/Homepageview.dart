@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePageView> {
           type: BottomNavigationBarType.shifting,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.cyan,
           elevation: 0,
           onTap: (value) {
             _pageController.animateToPage(value,
@@ -49,23 +49,23 @@ class _HomePageState extends State<HomePageView> {
           currentIndex: index,
           items: const [
             BottomNavigationBarItem(
-                backgroundColor: Colors.red,
+                backgroundColor: Colors.cyan,
                 icon: Icon(Icons.dashboard),
                 label: "Dashboard"),
             BottomNavigationBarItem(
-                backgroundColor: Colors.red,
+                backgroundColor: Colors.cyan,
                 icon: Icon(Icons.delivery_dining),
                 label: "Delivery"),
             BottomNavigationBarItem(
-                backgroundColor: Colors.red,
+                backgroundColor: Colors.cyan,
                 icon: Icon(Icons.home),
                 label: "Home"),
             BottomNavigationBarItem(
-                backgroundColor: Colors.red,
+                backgroundColor: Colors.cyan,
                 icon: Icon(Icons.dining),
                 label: "Dining"),
             BottomNavigationBarItem(
-                backgroundColor: Colors.red,
+                backgroundColor: Colors.cyan,
                 icon: Icon(Icons.settings),
                 label: "Settings"),
           ],

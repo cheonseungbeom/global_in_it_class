@@ -31,7 +31,7 @@ class Cake extends StatelessWidget {
                 onPressed: null,
                 icon: Icon(
                   Icons.shopping_cart_outlined,
-                  color: Colors.red,
+                  color: Colors.cyan,
                 )),
           ),
           Padding(
@@ -48,7 +48,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),
@@ -66,7 +66,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),
@@ -84,7 +84,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),
@@ -102,7 +102,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),
@@ -120,7 +120,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),
@@ -138,7 +138,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),
@@ -156,7 +156,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),
@@ -174,7 +174,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),
@@ -192,7 +192,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),
@@ -210,7 +210,7 @@ class Cake extends StatelessWidget {
                   onPressed: null,
                   icon: Icon(
                     Icons.shopping_cart_outlined,
-                    color: Colors.red,
+                    color: Colors.cyan,
                   )),
             ),
           ),

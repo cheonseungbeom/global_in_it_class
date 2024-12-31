@@ -94,9 +94,9 @@ flutter:
     - family: Lobster
       fonts:
         - asset: assets/fonts/Lobster-Regular.ttf
-    - family: Signatra
+    - family: Calibre-Semibold
       fonts:
-        - asset: assets/fonts/Signatra.ttf
+        - asset: assets/fonts/Calibre-Semibold.ttf
     - family: VarelaRound
       fonts:
         - asset: assets/fonts/VarelaRound-Regular.ttf

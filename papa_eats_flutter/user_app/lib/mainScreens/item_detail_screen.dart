@@ -60,7 +60,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "₹ ${widget.model!.price}",
+              "₩ ${widget.model!.price}",
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 26,
@@ -84,7 +84,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
               child: Container(
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Colors.redAccent, Colors.pinkAccent],
+                    colors: [Colors.cyan, Colors.cyan],
                     begin: FractionalOffset(0.0, 0.0),
                     end: FractionalOffset(1.0, 0.0),
                     stops: [0.0, 1.0],
@@ -95,7 +95,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                 width: MediaQuery.of(context).size.width - 13,
                 child: const Center(
                   child: Text(
-                    "Add to Cart",
+                    "장바구니 담기",
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
                 ),

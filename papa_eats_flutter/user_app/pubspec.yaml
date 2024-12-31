@@ -101,9 +101,9 @@ flutter:
      - family: Kiwi
        fonts:
         - asset: assets/fonts/KiwiMaru-Medium.ttf
-     - family: Signatra
+     - family: Calibre-Semibold
        fonts:
-        - asset: assets/fonts/Signatra.ttf
+        - asset: assets/fonts/Calibre-Semibold.otf
      - family: Train
        fonts:
         - asset: assets/fonts/TrainOne-Regular.ttf

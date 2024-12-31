@@ -14,12 +14,12 @@ class StatusBanner extends StatelessWidget {
     IconData? iconData;
 
     status! ? iconData = Icons.done : iconData = Icons.cancel;
-    status! ? message = "Successful" : message = "UnsuccessFul";
+    status! ? message = "완료" : message = "UnsuccessFul";
 
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.red, Colors.pinkAccent],
+          colors: [Colors.cyan, Colors.cyanAccent],
           begin: FractionalOffset(0.0, 0.0),
           end: FractionalOffset(1.0, 0.0),
           stops: [0.0, 1.0],

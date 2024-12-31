@@ -37,23 +37,23 @@ class _MySplashScreenState extends State<MySplashScreen> {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              colors: [
-                Colors.cyan,
-                Colors.cyan,
-              ],
-              begin: FractionalOffset(0.0, 0.0),
-              end: FractionalOffset(1.0, 0.0),
-              stops: [0.0, 1.0],
-              tileMode: TileMode.clamp)),
+      // decoration: const BoxDecoration(
+      //     gradient: LinearGradient(
+      //         colors: [
+      //           Colors.cyan,
+      //           Colors.cyan,
+      //         ],
+      //         begin: FractionalOffset(0.0, 0.0),
+      //         end: FractionalOffset(1.0, 0.0),
+      //         stops: [0.0, 1.0],
+      //         tileMode: TileMode.clamp)),
       child: Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(0.0),
                 child: Image.asset('assets/images/welcome.png'),
               ),
               const SizedBox(
@@ -69,7 +69,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
-                          fontFamily: "Train",
+                          fontFamily: "Calibre-Semibold",
                           letterSpacing: 3),
                     ),
                     Text(

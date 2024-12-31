@@ -31,7 +31,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.redAccent, Colors.pinkAccent],
+              colors: [Colors.cyan, Colors.cyan],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -58,7 +58,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.redAccent, Color.fromARGB(255, 255, 130, 130)],
+            colors: [Colors.cyan, Colors.cyanAccent],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -81,7 +81,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
               ),
               ElevatedButton(
                 style: ButtonStyle(
-                  backgroundColor: const MaterialStatePropertyAll(Colors.red),
+                  backgroundColor: const MaterialStatePropertyAll(Colors.cyan),
                   shape: MaterialStatePropertyAll(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -111,7 +111,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
             title: const Text(
               "Menu Image",
               style: TextStyle(
-                  color: Colors.redAccent, fontWeight: FontWeight.bold),
+                  color: Colors.cyan, fontWeight: FontWeight.bold),
             ),
             children: [
               SimpleDialogOption(
@@ -131,7 +131,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
               SimpleDialogOption(
                 child: const Text(
                   "Cancel",
-                  style: TextStyle(color: Colors.red),
+                  style: TextStyle(color: Colors.cyan),
                 ),
                 onPressed: () => Navigator.pop(context),
               ),
@@ -164,7 +164,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.redAccent, Colors.pinkAccent],
+              colors: [Colors.cyan, Colors.cyan],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -204,8 +204,8 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
       ),
       body: ListView(
         children: [
-          uploading == true ? linearProgress() : Text(""),
-          Container(
+          uploading == true ? linearProgress() : const Text(""),
+          SizedBox(
             height: 230,
             width: MediaQuery.of(context).size.width * 0.8,
             child: Center(
@@ -224,7 +224,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
             ),
           ),
           const Divider(
-            color: Colors.red,
+            color: Colors.cyan,
             thickness: 2,
           ),
           ListTile(
@@ -232,7 +232,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
               Icons.title,
               color: Colors.cyan,
             ),
-            title: Container(
+            title: SizedBox(
               width: 250,
               child: TextField(
                 style: const TextStyle(color: Colors.black),
@@ -245,7 +245,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
             ),
           ),
           const Divider(
-            color: Colors.red,
+            color: Colors.cyan,
             thickness: 2,
           ),
           ListTile(
@@ -253,7 +253,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
               Icons.perm_device_information,
               color: Colors.cyan,
             ),
-            title: Container(
+            title: SizedBox(
               width: 250,
               child: TextField(
                 style: const TextStyle(color: Colors.black),
@@ -266,7 +266,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
             ),
           ),
           const Divider(
-            color: Colors.red,
+            color: Colors.cyan,
             thickness: 2,
           ),
         ],

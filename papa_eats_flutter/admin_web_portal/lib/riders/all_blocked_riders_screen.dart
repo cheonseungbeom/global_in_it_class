@@ -34,7 +34,7 @@ class _AllBlockedRidersScreenState extends State<AllBlockedRidersScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text("아니오", style: TextStyle(color: Colors.red)),
+              child: const Text("아니오", style: TextStyle(color: Colors.cyan)),
             ),
             TextButton(
               onPressed: () {

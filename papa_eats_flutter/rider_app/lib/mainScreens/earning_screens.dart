@@ -19,7 +19,7 @@ class _EarningScreenState extends State<EarningScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("원$previousRidersEarnings",style: const TextStyle(
-              fontSize: 50,color: Colors.white,fontFamily: "Signatra"
+              fontSize: 50,color: Colors.white,fontFamily: "Calibre-Semibold"
             ),),
              const Text("Total Earnings",style: TextStyle(
               fontSize: 20,color: Colors.grey,fontWeight: FontWeight.bold

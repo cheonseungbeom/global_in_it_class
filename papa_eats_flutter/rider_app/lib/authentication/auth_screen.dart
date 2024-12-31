@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:rider_app/authentication/login.dart';
@@ -21,7 +20,7 @@ class _AuthScreenState extends State<AuthScreen> {
           flexibleSpace: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.redAccent, Colors.pinkAccent],
+                colors: [Colors.cyan, Colors.cyan],
                 begin: FractionalOffset(0.0, 0.0),
                 end: FractionalOffset(1.0, 0.0),
                 stops: [0.0, 1.0],
@@ -36,7 +35,7 @@ class _AuthScreenState extends State<AuthScreen> {
             style: TextStyle(
                 fontSize: 60,
                 color: Colors.white,
-                fontFamily: "Signatra",
+                fontFamily: "Calibre-Semibold",
                 letterSpacing: 6),
           ),
           centerTitle: true,
@@ -66,7 +65,7 @@ class _AuthScreenState extends State<AuthScreen> {
             gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
-              colors: [Colors.pinkAccent, Colors.redAccent],
+              colors: [Colors.cyan, Colors.cyan],
             ),
           ),
           child: const TabBarView(children: [

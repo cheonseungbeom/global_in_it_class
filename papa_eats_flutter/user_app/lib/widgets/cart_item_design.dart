@@ -24,8 +24,8 @@ class _CartItemDesignState extends State<CartItemDesign> {
     return InkWell(
       onTap: () {},
       child: Padding(
-        padding: EdgeInsets.all(6),
-        child: Container(
+        padding: const EdgeInsets.all(6),
+        child: SizedBox(
           height: 165,
           width: MediaQuery.of(context).size.width,
           child: Row(
@@ -76,11 +76,11 @@ class _CartItemDesignState extends State<CartItemDesign> {
                   Row(
                     children: [
                       const Text(
-                        "Price",
+                        "가격 : ",
                         style: TextStyle(fontSize: 16, color: Colors.blue),
                       ),
                       const Text(
-                        "₹",
+                        "₩",
                         style: TextStyle(fontSize: 16, color: Colors.blue),
                       ),
                       Text(

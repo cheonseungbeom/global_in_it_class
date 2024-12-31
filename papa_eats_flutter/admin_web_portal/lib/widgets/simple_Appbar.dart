@@ -6,7 +6,7 @@ class SimpleAppBar extends StatelessWidget with PreferredSizeWidget {
 
   final PreferredSizeWidget? bottom;
 
-  SimpleAppBar({this.bottom, this.title});
+  SimpleAppBar({super.key, this.bottom, this.title});
   @override
   Size get preferredSize => bottom == null
       ? Size(56, AppBar().preferredSize.height)
@@ -18,7 +18,7 @@ class SimpleAppBar extends StatelessWidget with PreferredSizeWidget {
       flexibleSpace: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.redAccent, Colors.pinkAccent],
+            colors: [Colors.cyan, Colors.cyan],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -38,7 +38,7 @@ class SimpleAppBar extends StatelessWidget with PreferredSizeWidget {
       centerTitle: true,
       title: Text(
         title!,
-        style: const TextStyle(fontSize: 20, fontFamily: "Signatra"),
+        style: const TextStyle(fontSize: 20, fontFamily: "Calibre-Semibold"),
       ),
     );
   }

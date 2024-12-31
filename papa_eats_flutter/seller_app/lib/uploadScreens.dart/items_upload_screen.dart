@@ -14,7 +14,7 @@ import 'package:firebase_storage/firebase_storage.dart' as storageRef;
 
 class ItemsUploadScreen extends StatefulWidget {
   final Menus? model;
-  ItemsUploadScreen({this.model});
+  const ItemsUploadScreen({super.key, this.model});
 
   @override
   State<ItemsUploadScreen> createState() => _ItemsUploadScreenState();
@@ -37,7 +37,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.redAccent, Colors.pinkAccent],
+              colors: [Colors.cyan, Colors.cyan],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -64,7 +64,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.pinkAccent, Colors.redAccent],
+            colors: [Colors.cyan, Colors.cyan],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -82,7 +82,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
               ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor:
-                      MaterialStatePropertyAll(Colors.red.shade300),
+                      MaterialStatePropertyAll(Colors.cyan.shade300),
                   shape: MaterialStatePropertyAll(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -132,7 +132,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
               SimpleDialogOption(
                 child: const Text(
                   "Cancel",
-                  style: TextStyle(color: Colors.red),
+                  style: TextStyle(color: Colors.cyan),
                 ),
                 onPressed: () => Navigator.pop(context),
               ),
@@ -165,7 +165,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.redAccent, Colors.pinkAccent],
+              colors: [Colors.cyan, Colors.cyan],
               begin: FractionalOffset(0.0, 0.0),
               end: FractionalOffset(1.0, 0.0),
               stops: [0.0, 1.0],
@@ -205,8 +205,8 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
       ),
       body: ListView(
         children: [
-          uploading == true ? linearProgress() : Text(""),
-          Container(
+          uploading == true ? linearProgress() : const Text(""),
+          SizedBox(
             height: 230,
             width: MediaQuery.of(context).size.width * 0.8,
             child: Center(
@@ -225,15 +225,15 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
             ),
           ),
           const Divider(
-            color: Colors.redAccent,
+            color: Colors.cyan,
             thickness: 2,
           ),
           ListTile(
             leading: const Icon(
               Icons.title,
-              color: Colors.redAccent,
+              color: Colors.cyan,
             ),
-            title: Container(
+            title: SizedBox(
               width: 250,
               child: TextField(
                 style: const TextStyle(color: Colors.black),
@@ -246,15 +246,15 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
             ),
           ),
           const Divider(
-            color: Colors.redAccent,
+            color: Colors.cyan,
             thickness: 2,
           ),
           ListTile(
             leading: const Icon(
               Icons.perm_device_information,
-              color: Colors.redAccent,
+              color: Colors.cyan,
             ),
-            title: Container(
+            title: SizedBox(
               width: 250,
               child: TextField(
                 style: const TextStyle(color: Colors.black),
@@ -267,15 +267,15 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
             ),
           ),
           const Divider(
-            color: Colors.redAccent,
+            color: Colors.cyan,
             thickness: 2,
           ),
           ListTile(
             leading: const Icon(
               Icons.description,
-              color: Colors.redAccent,
+              color: Colors.cyan,
             ),
-            title: Container(
+            title: SizedBox(
               width: 250,
               child: TextField(
                 style: const TextStyle(color: Colors.black),
@@ -288,29 +288,29 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
             ),
           ),
           const Divider(
-            color: Colors.redAccent,
+            color: Colors.cyan,
             thickness: 2,
           ),
           ListTile(
             leading: const Icon(
               Icons.currency_rupee_sharp,
-              color: Colors.redAccent,
+              color: Colors.cyan,
             ),
-            title: Container(
+            title: SizedBox(
               width: 250,
               child: TextField(
                 keyboardType: TextInputType.number,
                 style: const TextStyle(color: Colors.black),
                 controller: priceController,
                 decoration: const InputDecoration(
-                    hintText: "Price",
+                    hintText: "가격격",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: InputBorder.none),
               ),
             ),
           ),
           const Divider(
-            color: Colors.redAccent,
+            color: Colors.cyan,
             thickness: 2,
           ),
         ],

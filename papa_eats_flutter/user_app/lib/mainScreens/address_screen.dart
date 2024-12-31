@@ -5,7 +5,6 @@ import 'package:user_app/mainScreens/save_address_screen.dart';
 import 'package:user_app/models/address.dart';
 import 'package:user_app/widgets/address_design.dart';
 import 'package:user_app/widgets/progress_bar.dart';
-import 'package:user_app/widgets/simple_Appbar.dart';
 
 import '../assistant_methods/address_changer.dart';
 import '../global/global.dart';
@@ -14,7 +13,7 @@ class AddressScreen extends StatefulWidget {
   final double? totolAmmount;
   final String? sellerUID;
 
-  AddressScreen({this.totolAmmount, this.sellerUID});
+  const AddressScreen({super.key, this.totolAmmount, this.sellerUID});
 
   @override
   State<AddressScreen> createState() => _AddressScreenState();
@@ -24,8 +23,24 @@ class _AddressScreenState extends State<AddressScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: SimpleAppBar(
-        title: "PAPA-Eats",
+      appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.cyan, Colors.cyan],
+              begin: FractionalOffset(0.0, 0.0),
+              end: FractionalOffset(1.0, 0.0),
+              stops: [0.0, 1.0],
+              tileMode: TileMode.clamp,
+            ),
+          ),
+        ),
+        title: const Text(
+          "주소 편집",
+          style: TextStyle(fontFamily: "Calibre-Semibold", fontSize: 25),
+        ),
+        centerTitle: true,
+        automaticallyImplyLeading: true,
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
@@ -33,8 +48,8 @@ class _AddressScreenState extends State<AddressScreen> {
               MaterialPageRoute(builder: (context) => SaveAddressScreen()));
           // save address
         },
-        label: const Text("Add New Address"),
-        backgroundColor: Colors.redAccent,
+        label: const Text("새 주소 추가"),
+        backgroundColor: Colors.cyan,
         icon: const Icon(
           Icons.add_location,
           color: Colors.white,
@@ -48,14 +63,14 @@ class _AddressScreenState extends State<AddressScreen> {
             alignment: Alignment.bottomLeft,
             child: Padding(
               padding: EdgeInsets.all(8),
-              child: Text(
-                "Select Address",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
+              // child: Text(
+              //   "배달 받을 주소를 선택해주세요!",
+              //   style: TextStyle(
+              //     color: Colors.black,
+              //     fontWeight: FontWeight.bold,
+              //     fontSize: 20,
+              //   ),
+              // ),
             ),
           ),
           Consumer<AddressChanger>(builder: (context, address, c) {
@@ -71,7 +86,7 @@ class _AddressScreenState extends State<AddressScreen> {
                       ? Center(
                           child: circularProgress(),
                         )
-                      : snapshot.data!.docs.length == 0
+                      : snapshot.data!.docs.isEmpty
                           ? Container()
                           : ListView.builder(
                               itemCount: snapshot.data!.docs.length,

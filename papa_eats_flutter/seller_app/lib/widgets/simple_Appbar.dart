@@ -17,7 +17,7 @@ class SimpleAppBar extends StatelessWidget with PreferredSizeWidget {
       flexibleSpace: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.red, Colors.redAccent],
+            colors: [Colors.cyan, Colors.cyan],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -27,7 +27,7 @@ class SimpleAppBar extends StatelessWidget with PreferredSizeWidget {
       ),
       title: Text(
         title!,
-        style: const TextStyle(fontSize: 45, fontFamily: "Signatra"),
+        style: const TextStyle(fontSize: 45, fontFamily: "Calibre-Semibold"),
       ),
       centerTitle: true,
       automaticallyImplyLeading: true,

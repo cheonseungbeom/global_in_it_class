@@ -18,7 +18,7 @@ class TextWidgetHeader extends SliverPersistentHeaderDelegate {
         alignment: Alignment.center,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.pinkAccent, Colors.redAccent],
+            colors: [Colors.cyan, Colors.cyan],
             begin: FractionalOffset(0.0, 0.0),
             end: FractionalOffset(1.0, 0.0),
             stops: [0.0, 1.0],
@@ -31,7 +31,7 @@ class TextWidgetHeader extends SliverPersistentHeaderDelegate {
             maxLines: 2,
             textAlign: TextAlign.center,
             style: const TextStyle(
-                fontFamily: "signatra",
+                fontFamily: "Calibre-Semibold",
                 fontSize: 30,
                 letterSpacing: 2,
                 color: Colors.white),

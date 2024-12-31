@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:user_app/mainScreens/items_screen.dart';
 import 'package:user_app/models/menus.dart';
-import 'package:user_app/models/sellers.dart';
 
 class MenusDesignWidget extends StatefulWidget {
   Menus? model;
@@ -23,17 +22,17 @@ class _MenusDesignWidgetState extends State<MenusDesignWidget> {
             MaterialPageRoute(
                 builder: (context) => ItemsScreen(model: widget.model)));
       },
-      splashColor: Colors.pinkAccent,
+      splashColor: Colors.cyan,
       child: Padding(
         padding: const EdgeInsets.all(5),
-        child: Container(
+        child: SizedBox(
           height: 300,
           width: MediaQuery.of(context).size.width,
           child: Column(children: [
-            Divider(
+            const Divider(
               height: 4,
               thickness: 3,
-              color: Colors.grey[300],
+              color: Colors.white10,
             ),
             Image.network(
               widget.model!.thumbnailUrl!,
@@ -46,17 +45,17 @@ class _MenusDesignWidgetState extends State<MenusDesignWidget> {
             Text(
               widget.model!.menuTitle!,
               style: const TextStyle(
-                  color: Colors.pinkAccent, fontSize: 20, fontFamily: "Train"),
+                  color: Colors.black, fontSize: 20, fontFamily: "Calibre-Semibold"),
             ),
             Text(
               widget.model!.menuInfo!,
               style: const TextStyle(
-                  color: Colors.grey, fontSize: 20, fontFamily: "Train"),
+                  color: Colors.black, fontSize: 20, fontFamily: "Calibre-Semibold"),
             ),
-            Divider(
+            const Divider(
               height: 4,
               thickness: 2,
-              color: Colors.grey[300],
+              color: Colors.white10,
             )
           ]),
         ),

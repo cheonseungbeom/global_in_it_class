@@ -55,7 +55,7 @@ class _CartScreenState extends State<CartScreen> {
             icon: const Icon(Icons.clear_all)),
         title: const Text(
           "PAPA-Eats",
-          style: TextStyle(fontSize: 45, fontFamily: "Signatra"),
+          style: TextStyle(fontSize: 25, fontFamily: "Calibre-Semibold"),
         ),
         centerTitle: true,
         automaticallyImplyLeading: true,
@@ -77,10 +77,10 @@ class _CartScreenState extends State<CartScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const MySplashScreen()));
-                Fluttertoast.showToast(msg: "cart has been cleared");
+                Fluttertoast.showToast(msg: "장바구니를 비웠습니다!");
               },
-              label: const Text("Clear Cart"),
-              backgroundColor: Colors.redAccent,
+              label: const Text("비우기"),
+              backgroundColor: Colors.cyan,
               icon: const Icon(Icons.clear_all),
             ),
           ),
@@ -97,8 +97,8 @@ class _CartScreenState extends State<CartScreen> {
                               sellerUID: widget.sellerUID,
                             )));
               },
-              label: const Text("Check Out"),
-              backgroundColor: Colors.redAccent,
+              label: const Text("주문하기"),
+              backgroundColor: Colors.cyan,
               icon: const Icon(Icons.navigate_next),
             ),
           ),
@@ -108,7 +108,7 @@ class _CartScreenState extends State<CartScreen> {
         slivers: [
           SliverPersistentHeader(
             pinned: true,
-            delegate: TextWidgetHeader(title: "My Cart List"),
+            delegate: TextWidgetHeader(title: "장바구니"),
           ),
           SliverToBoxAdapter(
             child: Consumer2<TotalAmmount, CartItemCounter>(
@@ -119,7 +119,7 @@ class _CartScreenState extends State<CartScreen> {
                     child: cartProvider.count == 0
                         ? Container()
                         : Text(
-                            "Total Price: ${amountProvidr.tAmmount.toString()}",
+                            "주문 가격: ${amountProvidr.tAmmount.toString()}",
                             style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,

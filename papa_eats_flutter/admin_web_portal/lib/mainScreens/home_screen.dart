@@ -62,8 +62,8 @@ class _HomeScreenState extends State<HomeScreen> {
             decoration: const BoxDecoration(
                 gradient: LinearGradient(
                     colors: [
-                      Colors.redAccent,
-                      Colors.pinkAccent,
+                      Colors.cyan,
+                      Colors.cyan,
                     ],
                     begin: FractionalOffset(0, 0),
                     end: FractionalOffset(1, 0),
@@ -137,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontSize: 16, color: Colors.white, letterSpacing: 3),
                     ),
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(40), backgroundColor: Colors.pinkAccent,
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.cyan,
                     ),
                   )
                 ],
@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontSize: 16, color: Colors.white, letterSpacing: 3),
                     ),
                     style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(40), backgroundColor: Colors.pinkAccent,
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.cyan,
                     ),
                   ),
                   const SizedBox(
@@ -237,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
               //             fontSize: 16, color: Colors.white, letterSpacing: 3),
               //       ),
               //       style: ElevatedButton.styleFrom(
-              //         padding: const EdgeInsets.all(40), backgroundColor: Colors.pinkAccent,
+              //         padding: const EdgeInsets.all(40), backgroundColor: Colors.cyan,
               //       ),
               //     )
               //   ],
@@ -258,7 +258,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 16, color: Colors.white, letterSpacing: 3),
                 ),
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.all(40), backgroundColor: Colors.pinkAccent,
+                  padding: const EdgeInsets.all(40), backgroundColor: Colors.cyan,
                 ),
               )
             ],
