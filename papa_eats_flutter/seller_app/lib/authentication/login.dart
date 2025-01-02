@@ -117,12 +117,12 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           Container(
             alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.all(15),
-              child: Image.asset(
-                'assets/images/seller.png',
-                height: 270,
-              ),
+            child: const Padding(
+              padding: EdgeInsets.all(15),
+              // child: Image.asset(
+              //   'assets/images/seller.png',
+              //   height: 270,
+              // ),
             ),
           ),
           Form(
@@ -149,7 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
               formValidation();
             },
             style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 249, 117, 161),
+                backgroundColor: Color.fromARGB(255, 249, 117, 161),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
             child: const Text(

@@ -22,7 +22,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: SimpleAppBar(
-          title: "History",
+          title: "배달내역",
         ),
         body: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance

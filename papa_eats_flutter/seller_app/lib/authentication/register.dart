@@ -141,7 +141,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (currentUser != null) {
       saveDataToFireStore(currentUser!).then((value) {
         Navigator.pop(context);
-        Route newRoute = MaterialPageRoute(builder: (context) => HomeScreen());
+        Route newRoute = MaterialPageRoute(builder: (context) => const HomeScreen());
         Navigator.pushReplacement(context, newRoute);
       });
     }
@@ -208,7 +208,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   CustomTextField(
                     data: Icons.person,
                     controller: nameController,
-                    hintText: 'Name',
+                    hintText: '이름',
                     isObsecre: false,
                   ),
                   CustomTextField(
@@ -220,25 +220,25 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   CustomTextField(
                     data: Icons.lock,
                     controller: passwordController,
-                    hintText: 'Password',
+                    hintText: '비밀번호',
                     isObsecre: true,
                   ),
                   CustomTextField(
                     data: Icons.lock,
                     controller: confirmePasswordController,
-                    hintText: 'Confirm Password',
+                    hintText: '비밀번호 확인',
                     isObsecre: true,
                   ),
                   CustomTextField(
                     data: Icons.phone,
                     controller: phoneController,
-                    hintText: 'Phone',
+                    hintText: '연락처',
                     isObsecre: false,
                   ),
                   CustomTextField(
                     data: Icons.my_location,
                     controller: locationController,
-                    hintText: 'Cafe/Restaurent Address',
+                    hintText: '판매자 주소',
                     isObsecre: false,
                     enabled: true,
                   ),
@@ -258,11 +258,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         color: Colors.white,
                       ),
                       label: const Text(
-                        'Get My Current Location',
+                        '지도에서 주소 가져오기',
                         style: TextStyle(color: Colors.white),
                       ),
                       style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(255, 250, 171, 119),
+                          backgroundColor: const Color.fromARGB(255, 250, 171, 119),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           )),
@@ -279,11 +279,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 formValidation(),
               },
               style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 249, 117, 161),
+                  backgroundColor: const Color.fromARGB(255, 249, 117, 161),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
               child: const Text(
-                "Sign Up",
+                "가입",
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),

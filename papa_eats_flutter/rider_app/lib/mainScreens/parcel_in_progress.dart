@@ -22,7 +22,7 @@ class _ParcelInProgressState extends State<ParcelInProgress> {
     return SafeArea(
       child: Scaffold(
         appBar: SimpleAppBar(
-          title: "Parcel In Progress",
+          title: "배송중",
         ),
         body: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance

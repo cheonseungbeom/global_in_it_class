@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:seller_app/authentication/login.dart';
@@ -32,9 +31,9 @@ class _AuthScreenState extends State<AuthScreen> {
           automaticallyImplyLeading:
               false, //removes the default back arrow button from screen
           title: const Text(
-            'I-Eat',
+            'PAPA-Eats',
             style: TextStyle(
-                fontSize: 60, color: Colors.white, fontFamily: "Lobster"),
+                fontSize: 60, color: Colors.white, fontFamily: "Calibre-Semibold"),
           ),
           centerTitle: true,
           bottom: const TabBar(

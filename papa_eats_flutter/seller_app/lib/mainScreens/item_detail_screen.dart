@@ -99,7 +99,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                 width: MediaQuery.of(context).size.width - 13,
                 child: const Center(
                   child: Text(
-                    "Delete thid item",
+                    "상품 제거",
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
                 ),

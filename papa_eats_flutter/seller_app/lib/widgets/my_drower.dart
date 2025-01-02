@@ -63,7 +63,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "Home",
+                    "홈",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
@@ -84,7 +84,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "My Earnings",
+                    "내 수입",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
@@ -105,7 +105,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "New orders",
+                    "새로운 주문",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
@@ -126,7 +126,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "History - Orders",
+                    "판매 내역",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {
@@ -147,7 +147,7 @@ class MyDrawer extends StatelessWidget {
                     color: Colors.black,
                   ),
                   title: const Text(
-                    "Sign Out",
+                    "로그 아웃",
                     style: TextStyle(color: Colors.black),
                   ),
                   onTap: () {

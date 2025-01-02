@@ -9,6 +9,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../riders/all_blocked_riders_screen.dart';
+import '../riders/all_verified_riders_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -192,56 +195,56 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     ElevatedButton.icon(
-              //       onPressed: () {
-              //         Navigator.push(
-              //             context,
-              //             MaterialPageRoute(
-              //                 builder: (context) =>
-              //                     const AllVerifiedRidersScreen()));
-              //       },
-              //       icon: const Icon(
-              //         Icons.person_add,
-              //         color: Colors.white,
-              //       ),
-              //       label: Text(
-              //         "밴 당한 라이더 \n${"계정".toUpperCase()}",
-              //         style: const TextStyle(
-              //             fontSize: 16, color: Colors.white, letterSpacing: 3),
-              //       ),
-              //       style: ElevatedButton.styleFrom(
-              //         padding: const EdgeInsets.all(40), backgroundColor: Colors.amber,
-              //       ),
-              //     ),
-              //     const SizedBox(
-              //       width: 20,
-              //     ),
-              //     ElevatedButton.icon(
-              //       onPressed: () {
-              //         Navigator.push(
-              //             context,
-              //             MaterialPageRoute(
-              //                 builder: (context) =>
-              //                     const AllBlockedRidersScreen()));
-              //       },
-              //       icon: const Icon(
-              //         Icons.block_flipped,
-              //         color: Colors.white,
-              //       ),
-              //       label: Text(
-              //         "모든 라이더  \n${"계정".toUpperCase()}",
-              //         style: const TextStyle(
-              //             fontSize: 16, color: Colors.white, letterSpacing: 3),
-              //       ),
-              //       style: ElevatedButton.styleFrom(
-              //         padding: const EdgeInsets.all(40), backgroundColor: Colors.cyan,
-              //       ),
-              //     )
-              //   ],
-              // ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const AllVerifiedRidersScreen()));
+                    },
+                    icon: const Icon(
+                      Icons.person_add,
+                      color: Colors.white,
+                    ),
+                    label: Text(
+                      "밴 당한 라이더 \n${"계정".toUpperCase()}",
+                      style: const TextStyle(
+                          fontSize: 16, color: Colors.white, letterSpacing: 3),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.amber,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const AllBlockedRidersScreen()));
+                    },
+                    icon: const Icon(
+                      Icons.block_flipped,
+                      color: Colors.white,
+                    ),
+                    label: Text(
+                      "모든 라이더  \n${"계정".toUpperCase()}",
+                      style: const TextStyle(
+                          fontSize: 16, color: Colors.white, letterSpacing: 3),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.all(40), backgroundColor: Colors.cyan,
+                    ),
+                  )
+                ],
+              ),
               ElevatedButton.icon(
                 onPressed: () {
                   FirebaseAuth.instance.signOut();

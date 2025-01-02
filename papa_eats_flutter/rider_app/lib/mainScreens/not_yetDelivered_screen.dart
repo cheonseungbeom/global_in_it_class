@@ -22,7 +22,7 @@ class _NotYetDeliveredScreenState extends State<NotYetDeliveredScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: SimpleAppBar(
-          title: "To be Deliver",
+          title: "배달해야 할 주문",
         ),
         body: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance

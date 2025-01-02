@@ -46,8 +46,8 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
           ),
         ),
         title: const Text(
-          "Add New Items",
-          style: TextStyle(fontSize: 30, fontFamily: "Lobster"),
+          "새로운 제품 추가",
+          style: TextStyle(fontSize: 30, fontFamily: "Calibre-Semibold"),
         ),
         centerTitle: true,
         automaticallyImplyLeading: true,
@@ -93,7 +93,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
                   tekeImage(context);
                 },
                 child: const Text(
-                  'Add New Items',
+                  '새로운 제품 추가',
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
@@ -174,8 +174,8 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
           ),
         ),
         title: const Text(
-          "Uploading New Item",
-          style: TextStyle(fontSize: 20, fontFamily: "Lobster"),
+          "새 상품 추가",
+          style: TextStyle(fontSize: 20, fontFamily: "Calibre-Semibold"),
         ),
         centerTitle: true,
         automaticallyImplyLeading: true,
@@ -239,7 +239,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
                 style: const TextStyle(color: Colors.black),
                 controller: titleController,
                 decoration: const InputDecoration(
-                    hintText: "title",
+                    hintText: "상품이름",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: InputBorder.none),
               ),
@@ -260,7 +260,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
                 style: const TextStyle(color: Colors.black),
                 controller: shortInfoController,
                 decoration: const InputDecoration(
-                    hintText: "info",
+                    hintText: "상품정보",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: InputBorder.none),
               ),
@@ -281,7 +281,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
                 style: const TextStyle(color: Colors.black),
                 controller: descriptionController,
                 decoration: const InputDecoration(
-                    hintText: "Description",
+                    hintText: "상품설명",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: InputBorder.none),
               ),
@@ -293,7 +293,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
           ),
           ListTile(
             leading: const Icon(
-              Icons.currency_rupee_sharp,
+              Icons.currency_yen_sharp,
               color: Colors.cyan,
             ),
             title: SizedBox(
@@ -303,7 +303,7 @@ class _ItemsUploadScreenState extends State<ItemsUploadScreen> {
                 style: const TextStyle(color: Colors.black),
                 controller: priceController,
                 decoration: const InputDecoration(
-                    hintText: "가격격",
+                    hintText: "가격",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: InputBorder.none),
               ),

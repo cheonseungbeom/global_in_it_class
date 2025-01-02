@@ -21,7 +21,7 @@ class _NewOrdersScreenState extends State<NewOrdersScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: SimpleAppBar(
-          title: "New Orders",
+          title: "배송가능 주문",
         ),
         body: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance

@@ -40,8 +40,8 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
           ),
         ),
         title: const Text(
-          "Add New Menu",
-          style: TextStyle(fontSize: 30, fontFamily: "Lobster"),
+          "새로운 메뉴 추가",
+          style: TextStyle(fontSize: 30, fontFamily: "Calibre-Semibold"),
         ),
         centerTitle: true,
         automaticallyImplyLeading: true,
@@ -92,7 +92,7 @@ class _MenusUploadScreenState extends State<MenusUploadScreen> {
                   tekeImage(context);
                 },
                 child: const Text(
-                  'Add New Menu',
+                  '새로운 메뉴 추가',
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
