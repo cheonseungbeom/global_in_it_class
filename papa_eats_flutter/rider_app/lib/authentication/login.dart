@@ -92,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Navigator.pop(context);
           Fluttertoast.showToast(
               msg:
-                  "Admin has Blocked your account \n\n Mail to:admin@gmail.com");
+                  "관리자에게 접근 금지당하였습니다 \n\n 문의:admin@gmail.com");
         }
       } else {
         firebaseAuth.signOut();

@@ -91,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Navigator.pop(context);
           Fluttertoast.showToast(
               msg:
-                  "Admin has Blocked your account \n\n Mail to:admin@gmail.com");
+                  "관리자에게 접근 금지당하였습니다 \n\n 문의:admin@gmail.co");
         }
       } else {
         firebaseAuth.signOut();
@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
             context: context,
             builder: (context) {
               return const ErrorDialog(
-                message: "no record found",
+                message: "다시 한번 확인해주세요",
               );
             });
       }

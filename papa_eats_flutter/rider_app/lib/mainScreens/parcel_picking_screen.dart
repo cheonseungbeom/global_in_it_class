@@ -149,7 +149,7 @@ class _ParcelPickingScreenState extends State<ParcelPickingScreen> {
                   height: 50,
                   child: const Center(
                     child: Text(
-                      "Order has been Picked-Confirmed",
+                      "상품을 픽업했습니다 - 확인",
                       style: TextStyle(color: Colors.white, fontSize: 15.0),
                     ),
                   ),

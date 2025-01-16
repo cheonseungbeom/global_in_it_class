@@ -51,7 +51,7 @@ class _PopularRestaurentItemsState extends State<PopularRestaurentItems> {
         restaurentAddress: 'Alambag Lucknow',
         restaurentDistance: '2 km',
         restaurentRating: '4.5',
-        restaurentItemCategory: 'Pure Veg'),
+        restaurentItemCategory: '분식'),
   ];
   @override
   Widget build(BuildContext context) {

@@ -28,7 +28,7 @@ class _PopularRestaurent2State extends State<PopularRestaurent2> {
         restaurentAddress: 'Alambag Lucknow',
         restaurentDistance: '2 km',
         restaurentRating: '4.5',
-        restaurentItemCategory: 'Pure Veg'),
+        restaurentItemCategory: '분식'),
     PopularRestaurentItemsModel(
         restaurentImage: 'assets/images/restaurent9.jpeg',
         restaurentName: 'JB Celebrations',

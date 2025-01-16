@@ -72,6 +72,7 @@ class HomeLargeItems extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Text(
+
                         '지금 확인!',
                         style: TextStyle(
                             color: Color.fromARGB(255, 255, 255, 255),

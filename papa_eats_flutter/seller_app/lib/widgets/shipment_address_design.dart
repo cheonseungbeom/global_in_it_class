@@ -102,7 +102,7 @@ class ShipmentAddressDesign extends StatelessWidget {
                 height: 50,
                 child: Center(
                   child: Text(
-                    orderStatus == "ended" ? "Go Back" : "Order Packing-Done",
+                    orderStatus == "ended" ? "Go Back" : "상품 포장 완료료",
                     style: TextStyle(color: Colors.white, fontSize: 15.0),
                   ),
                 ),

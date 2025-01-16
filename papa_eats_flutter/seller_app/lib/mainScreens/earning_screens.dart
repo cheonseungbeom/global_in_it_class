@@ -12,7 +12,7 @@ class EarningScreen extends StatefulWidget {
 }
 
 class _EarningScreenState extends State<EarningScreen> {
-  double sellerTotalEarnings = 0;
+  int sellerTotalEarnings = 0;
   retriveSellersEarnings() async {
     FirebaseFirestore.instance
         .collection("sellers")
@@ -20,7 +20,7 @@ class _EarningScreenState extends State<EarningScreen> {
         .get()
         .then((snap) {
       setState(() {
-        sellerTotalEarnings = double.parse(snap.data()!["earnings"].toString());
+        sellerTotalEarnings = int.parse(snap.data()!["earnings"].toString());
       });
     });
   }
@@ -48,7 +48,7 @@ class _EarningScreenState extends State<EarningScreen> {
                   fontSize: 50, color: Colors.white, fontFamily: "Calibre-Semibold"),
             ),
             const Text(
-              "Total Earnings",
+              "총 수입",
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.grey,

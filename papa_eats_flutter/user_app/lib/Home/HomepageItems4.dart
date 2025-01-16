@@ -39,7 +39,7 @@ class HomePageItems4 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Text('Samosa')
+                    const Text('냠냠')
                   ],
                 ),
               ),
@@ -68,7 +68,7 @@ class HomePageItems4 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Text('Chokolate')
+                    const Text('냠냠')
                   ],
                 ),
               ),
@@ -97,7 +97,7 @@ class HomePageItems4 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Text('Pastries')
+                    const Text('냠냠')
                   ],
                 ),
               ),
@@ -125,7 +125,7 @@ class HomePageItems4 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Text('Momos')
+                    const Text('모구')
                   ],
                 ),
               ),
@@ -281,7 +281,7 @@ class HomePageItems4 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Text('Gulab Jamun')
+                    const Text('냠냠')
                   ],
                 ),
               ),
@@ -310,7 +310,7 @@ class HomePageItems4 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Text('Jalebi')
+                    const Text('냠냠')
                   ],
                 ),
               ),
@@ -339,7 +339,7 @@ class HomePageItems4 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Text('Kaju Barfi')
+                    const Text('모구')
                   ],
                 ),
               ),
@@ -368,7 +368,7 @@ class HomePageItems4 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Text('Soft Drinks')
+                    const Text('냠냠')
                   ],
                 ),
               ),

@@ -134,7 +134,7 @@ class ShipmentAddressDesign extends StatelessWidget {
                       height: 50,
                       child: const Center(
                         child: Text(
-                          "Confirm- To Deliver This Parcel",
+                          "이 상품 배달하기",
                           style: TextStyle(color: Colors.white, fontSize: 15.0),
                         ),
                       ),
@@ -168,7 +168,7 @@ class ShipmentAddressDesign extends StatelessWidget {
                 height: 50,
                 child: const Center(
                   child: Text(
-                    "Go Back",
+                    "뒤로 가기",
                     style: TextStyle(color: Colors.white, fontSize: 15.0),
                   ),
                 ),

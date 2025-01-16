@@ -16,7 +16,7 @@ class ErrorDialog extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(backgroundColor: Colors.cyan),
           child: const Center(
-            child: Text('ok'),
+            child: Text('확인'),
           ),
         )
       ],

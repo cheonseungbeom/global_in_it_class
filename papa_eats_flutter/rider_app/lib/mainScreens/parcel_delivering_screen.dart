@@ -143,7 +143,7 @@ class _ParcelDeliveringScreenState extends State<ParcelDeliveringScreen> {
                       height: 13,
                     ),
                     Text(
-                      "Show Delivery Drop-off Location",
+                      "배달 장소 표시",
                       style: TextStyle(
                           color: Colors.blue,
                           fontSize: 18,
@@ -193,7 +193,7 @@ class _ParcelDeliveringScreenState extends State<ParcelDeliveringScreen> {
                   height: 50,
                   child: const Center(
                     child: Text(
-                      "Order has been Delivered-Confirm",
+                      "주문이 전달되었습니다 - 확인",
                       style: TextStyle(color: Colors.white, fontSize: 15.0),
                     ),
                   ),
